@@ -10,10 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    // MARK: - Public Properties
     var beer1 = Beer(brand: "Heineken", country: "Netherlands", price: 1, left: 70, general: 0)
     var beer2 = Beer(brand: "Guinness", country: "Ireland", price: 2, left: 65, general: 0)
     var beer3 = Beer(brand: "Bud", country: "Czech Republic", price: 1, left: 60, general: 0)
     
+    // MARK: - Outlets
     @IBOutlet weak var calculations: UILabel!
     
     @IBOutlet weak var beer1Info: UIButton!
@@ -22,6 +24,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var beer3Info: UIButton!
     
+    
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,12 +36,12 @@ class ViewController: UIViewController {
         beer3Info.setTitle("\(beer3.show())", for: .normal)
         
     }
-    
+    // MARK: - Actions
     @IBAction func currentincome(_ sender: Any) {
         calculations.text = "Current income is \(beerShop.beershop.income())$"
     }
     @IBAction func beerleft(_ sender: Any) {
-
+        
         calculations.text = "\(beerShop.beershop.beerleftbutton())"
     }
     @IBAction func startnewday(_ sender: Any) {

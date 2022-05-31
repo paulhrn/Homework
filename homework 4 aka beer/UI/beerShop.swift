@@ -9,14 +9,17 @@ import Foundation
 
 class beerShop {
     
+    // MARK: - Public Properties
     static let beershop = beerShop(beer: [])
     var beer: [Beer] = []
-    
     var index = 0
     
+    // MARK: - Life Cycle
     private init(beer: [Beer]) {
         self.beer = beer
     }
+    
+    // MARK: - Public Funcs
     //SELL
     func sell(n: Int)  {
         if beerShop.beershop.beer[n].left >= 1 {

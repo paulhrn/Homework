@@ -8,8 +8,20 @@ import UIKit
 
 class thirdVC: UIViewController {
     
-    let movingCircle = UIView()
+    // MARK: - Private Properties
+    private let movingCircle = UIView()
     
+    private enum Moves {
+        case up
+        case down
+        case right
+        case left
+    }
+    
+    // MARK: - Outlets
+    @IBOutlet weak var mainLabel: UILabel!
+    
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 0.8916817563, green: 0.9905012619, blue: 1, alpha: 1)
@@ -23,24 +35,60 @@ class thirdVC: UIViewController {
         view.addSubview(movingCircle)
     }
     
+    // MARK: - Actions
     @IBAction func buttonUp(_ sender: Any) {
-        if movingCircle.frame.maxY - movingCircle.frame.height >= 40 {
-            movingCircle.center.y -= 10 }
+        move(direction: .up)
     }
     @IBAction func buttonDown(_ sender: Any) {
-        if movingCircle.frame.maxY - movingCircle.frame.height <= 580 {
-            movingCircle.center.y += 10 }
+        move(direction: .down)
     }
     @IBAction func buttonLeft(_ sender: Any) {
-        if movingCircle.frame.maxX - movingCircle.frame.height >= 10 {
-            movingCircle.center.x -= 10
-        }
+        move(direction: .left)
+        
     }
     @IBAction func buttonRight(_ sender: Any) {
-        if movingCircle.frame.maxX - movingCircle.frame.height <= 320 {
+        move(direction: .right)
+        
+    }
+    // MARK: - Private Funcs
+    private func move(direction: Moves) {
+        switch direction {
+        case Moves.up: if movingCircle.frame.maxY - movingCircle.frame.height >= 40 {
+            movingCircle.center.y -= 10
+            mainLabel.text = "Going up"
+        }
+            else {
+                mainLabel.text = "Error"
+                mainLabel.textColor = .red
+                mainLabel.font = mainLabel.font.withSize(30)
+            }
+        case Moves.down:  if movingCircle.frame.maxY - movingCircle.frame.height <= 580 {
+            movingCircle.center.y += 10
+            mainLabel.text = "Going down"
+        }
+            else {
+                mainLabel.text = "Error"
+                mainLabel.textColor = .red
+                mainLabel.font = mainLabel.font.withSize(30)
+            }
+        case Moves.right:   if movingCircle.frame.maxX - movingCircle.frame.height <= 320 {
             movingCircle.center.x += 10
-            
+            mainLabel.text = "Going right"
+        }
+            else {
+                mainLabel.text = "Error"
+                mainLabel.textColor = .red
+                mainLabel.font = mainLabel.font.withSize(30)
+            }
+        case Moves.left:  if movingCircle.frame.maxX - movingCircle.frame.height >= 10 {
+            movingCircle.center.x -= 10
+            mainLabel.text = "Going left"
+        }
+            else {
+                mainLabel.text = "Error"
+                mainLabel.textColor = .red
+                mainLabel.font = mainLabel.font.withSize(30)
+            }
         }
     }
 }
-

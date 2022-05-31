@@ -9,8 +9,10 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let forCats = UIView()
+    // MARK: - Private Properties
+    private let forCats = UIView()
     
+    // MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,15 +28,18 @@ class ViewController: UIViewController {
         forCats.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTap)))
     }
     
+    // MARK: - Actions
     @objc func didTap() {
         color()
         place()
     }
-    func color() {
+    
+    // MARK: - Private Funcs
+    private func color() {
         
         forCats.backgroundColor = UIColor(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1), alpha: 1)
     }
-    func place() {
+    private func place() {
         
         self.forCats.frame = CGRect(x: .random(in: 10...view.frame.maxX - forCats.frame.width), y: .random(in: 40...view.frame.maxY - forCats.frame.height), width: forCats.frame.width, height: forCats.frame.height)
     }
