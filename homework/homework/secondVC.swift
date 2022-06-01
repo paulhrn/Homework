@@ -47,7 +47,6 @@ class secondVC: UIViewController {
             }
         }
     }
-    
     // MARK: - Outlets
     @IBOutlet weak var buttonLook: UIButton!
     
@@ -68,43 +67,13 @@ class secondVC: UIViewController {
         for everyX in 0...Int(view.frame.maxX / CGFloat(points)) {
             for everyY in 0...Int(view.frame.maxY / CGFloat(points)) {
                 
-                //Creating multiple UIViews
-                let square = UIView()
-                square.frame = CGRect(x: everyX * points, y: everyY * points, width: points, height: points)
-                square.backgroundColor = MyColor.allCases.randomElement()!.color
-                view.addSubview(square)
+                let element = MyColor.allCases.randomElement()!
                 
-                //Creating multiple UILabels
                 let label = UILabel()
-                label.frame = square.frame
+                label.frame = CGRect(x: everyX * points, y: everyY * points, width: points, height: points)
+                label.backgroundColor = element.color
                 label.textAlignment = .center
-                if square.backgroundColor == MyColor.firstColor.color {
-                    label.text = MyColor.firstColor.rawValue
-                }
-                else if square.backgroundColor == MyColor.secondColor.color {
-                    label.text = MyColor.secondColor.rawValue
-                }
-                else if square.backgroundColor == MyColor.thirdColor.color {
-                    label.text = MyColor.thirdColor.rawValue
-                }
-                else if square.backgroundColor == MyColor.fourthColor.color {
-                    label.text = MyColor.fourthColor.rawValue
-                }
-                else if square.backgroundColor == MyColor.fifthColor.color {
-                    label.text = MyColor.fifthColor.rawValue
-                }
-                else if square.backgroundColor == MyColor.sixthColor.color {
-                    label.text = MyColor.sixthColor.rawValue
-                }
-                else if square.backgroundColor == MyColor.seventhColor.color {
-                    label.text = MyColor.seventhColor.rawValue
-                }
-                else if square.backgroundColor == MyColor.eighthColor.color {
-                    label.text = MyColor.eighthColor.rawValue
-                }
-                else if square.backgroundColor == MyColor.ninthColor.color {
-                    label.text = MyColor.ninthColor.rawValue
-                }
+                label.text = element.rawValue
                 label.textColor = .black
                 label.font = label.font.withSize(20)
                 view.addSubview(label)
