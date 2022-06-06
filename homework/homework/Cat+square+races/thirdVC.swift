@@ -1,18 +1,17 @@
 //
-//  ViewController.swift
+//  thirdVC.swift
 //  homework
 //
-//  Created by p h on 06.05.2022.
-//
+//  Created by p h on 25.05.2022.
 
 import UIKit
 
-class ViewController: UIViewController {
+class thirdVC: UIViewController {
     
     // MARK: - Private Properties
     private let forCats = UIView()
     
-    // MARK: - life cycle
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         

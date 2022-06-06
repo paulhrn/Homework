@@ -48,7 +48,7 @@ class secondVC: UIViewController {
         }
     }
     // MARK: - Outlets
-    @IBOutlet weak var buttonLook: UIButton!
+    @IBOutlet weak var buttonLooks: UIButton!
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -58,9 +58,10 @@ class secondVC: UIViewController {
         
     }
     // MARK: - Actions
-    @IBAction func buttonDo(_ sender: UIButton) {
+    @IBAction func buttonDoes(_ sender: UIButton) {
         fillDisplay()
     }
+    
     
     // MARK: - Private Funcs
     private func fillDisplay() {
@@ -79,6 +80,6 @@ class secondVC: UIViewController {
                 view.addSubview(label)
             }
         }
-        view.bringSubviewToFront(buttonLook)
+        view.bringSubviewToFront(buttonLooks)
     }
 }

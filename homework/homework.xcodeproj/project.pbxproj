@@ -8,22 +8,47 @@
 
 /* Begin PBXBuildFile section */
 		FA13DD40283EB98B005AC95D /* secondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA13DD3F283EB98B005AC95D /* secondVC.swift */; };
+		FA49F7102847FBDE002ABFA1 /* Races.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA49F70F2847FBDE002ABFA1 /* Races.storyboard */; };
+		FA49F7122847FBEE002ABFA1 /* RacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49F7112847FBEE002ABFA1 /* RacesViewController.swift */; };
+		FA49F7142847FE52002ABFA1 /* PlayRaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49F7132847FE52002ABFA1 /* PlayRaces.swift */; };
+		FA49F7162847FE63002ABFA1 /* ScoresRaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49F7152847FE63002ABFA1 /* ScoresRaces.swift */; };
+		FA49F7182847FE72002ABFA1 /* SettingsRaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49F7172847FE72002ABFA1 /* SettingsRaces.swift */; };
+		FA49F71B28480783002ABFA1 /* FirstTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49F71A28480783002ABFA1 /* FirstTaskViewController.swift */; };
+		FA49F71D2848079B002ABFA1 /* SecondTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49F71C2848079B002ABFA1 /* SecondTaskViewController.swift */; };
+		FA49F71F284807AD002ABFA1 /* FirstTaskStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA49F71E284807AD002ABFA1 /* FirstTaskStoryboard.storyboard */; };
+		FA49F721284807BF002ABFA1 /* SecondTaskStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA49F720284807BF002ABFA1 /* SecondTaskStoryboard.storyboard */; };
+		FA49F72528481470002ABFA1 /* screen2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49F72428481470002ABFA1 /* screen2.swift */; };
+		FA49F7272848147B002ABFA1 /* screen3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49F7262848147B002ABFA1 /* screen3.swift */; };
+		FA49F72928481480002ABFA1 /* screen4.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49F72828481480002ABFA1 /* screen4.swift */; };
+		FA49F72B2848148A002ABFA1 /* screen5.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49F72A2848148A002ABFA1 /* screen5.swift */; };
+		FA49F72D2848213F002ABFA1 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49F72C2848213F002ABFA1 /* File.swift */; };
 		FA4BD90D283ECBB200873F33 /* thirdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4BD90C283ECBB200873F33 /* thirdVC.swift */; };
-		FA4BD90F283ED04600873F33 /* ThirdView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA4BD90E283ED04600873F33 /* ThirdView.storyboard */; };
-		FA4BD911283EE09700873F33 /* SecondView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA4BD910283EE09700873F33 /* SecondView.storyboard */; };
 		FAC34C2528249F670061F3D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC34C2428249F670061F3D8 /* AppDelegate.swift */; };
 		FAC34C2728249F670061F3D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC34C2628249F670061F3D8 /* SceneDelegate.swift */; };
 		FAC34C2928249F670061F3D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC34C2828249F670061F3D8 /* ViewController.swift */; };
 		FAC34C2C28249F670061F3D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC34C2A28249F670061F3D8 /* Main.storyboard */; };
 		FAC34C2E28249F690061F3D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC34C2D28249F690061F3D8 /* Assets.xcassets */; };
 		FAC34C3128249F690061F3D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC34C2F28249F690061F3D8 /* LaunchScreen.storyboard */; };
+		FAC397C4284914A200204BE3 /* ClassToShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC397C3284914A200204BE3 /* ClassToShow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FA13DD3F283EB98B005AC95D /* secondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondVC.swift; sourceTree = "<group>"; };
+		FA49F70F2847FBDE002ABFA1 /* Races.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Races.storyboard; sourceTree = "<group>"; };
+		FA49F7112847FBEE002ABFA1 /* RacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacesViewController.swift; sourceTree = "<group>"; };
+		FA49F7132847FE52002ABFA1 /* PlayRaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRaces.swift; sourceTree = "<group>"; };
+		FA49F7152847FE63002ABFA1 /* ScoresRaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresRaces.swift; sourceTree = "<group>"; };
+		FA49F7172847FE72002ABFA1 /* SettingsRaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRaces.swift; sourceTree = "<group>"; };
+		FA49F71A28480783002ABFA1 /* FirstTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTaskViewController.swift; sourceTree = "<group>"; };
+		FA49F71C2848079B002ABFA1 /* SecondTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTaskViewController.swift; sourceTree = "<group>"; };
+		FA49F71E284807AD002ABFA1 /* FirstTaskStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirstTaskStoryboard.storyboard; sourceTree = "<group>"; };
+		FA49F720284807BF002ABFA1 /* SecondTaskStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondTaskStoryboard.storyboard; sourceTree = "<group>"; };
+		FA49F72428481470002ABFA1 /* screen2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = screen2.swift; sourceTree = "<group>"; };
+		FA49F7262848147B002ABFA1 /* screen3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = screen3.swift; sourceTree = "<group>"; };
+		FA49F72828481480002ABFA1 /* screen4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = screen4.swift; sourceTree = "<group>"; };
+		FA49F72A2848148A002ABFA1 /* screen5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = screen5.swift; sourceTree = "<group>"; };
+		FA49F72C2848213F002ABFA1 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		FA4BD90C283ECBB200873F33 /* thirdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thirdVC.swift; sourceTree = "<group>"; };
-		FA4BD90E283ED04600873F33 /* ThirdView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ThirdView.storyboard; sourceTree = "<group>"; };
-		FA4BD910283EE09700873F33 /* SecondView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondView.storyboard; sourceTree = "<group>"; };
 		FAC34C2128249F670061F3D8 /* homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = homework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC34C2428249F670061F3D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAC34C2628249F670061F3D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +57,7 @@
 		FAC34C2D28249F690061F3D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAC34C3028249F690061F3D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAC34C3228249F690061F3D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAC397C3284914A200204BE3 /* ClassToShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassToShow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +71,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA49F71928480527002ABFA1 /* Cat+square+races */ = {
+			isa = PBXGroup;
+			children = (
+				FAC34C2828249F670061F3D8 /* ViewController.swift */,
+				FA4BD90C283ECBB200873F33 /* thirdVC.swift */,
+				FA13DD3F283EB98B005AC95D /* secondVC.swift */,
+				FAC34C2A28249F670061F3D8 /* Main.storyboard */,
+				FA49F7112847FBEE002ABFA1 /* RacesViewController.swift */,
+				FA49F7132847FE52002ABFA1 /* PlayRaces.swift */,
+				FA49F7152847FE63002ABFA1 /* ScoresRaces.swift */,
+				FA49F7172847FE72002ABFA1 /* SettingsRaces.swift */,
+				FA49F70F2847FBDE002ABFA1 /* Races.storyboard */,
+			);
+			path = "Cat+square+races";
+			sourceTree = "<group>";
+		};
+		FA49F722284807D9002ABFA1 /* First task */ = {
+			isa = PBXGroup;
+			children = (
+				FA49F71A28480783002ABFA1 /* FirstTaskViewController.swift */,
+				FA49F71E284807AD002ABFA1 /* FirstTaskStoryboard.storyboard */,
+				FA49F72428481470002ABFA1 /* screen2.swift */,
+				FA49F7262848147B002ABFA1 /* screen3.swift */,
+				FA49F72828481480002ABFA1 /* screen4.swift */,
+				FA49F72A2848148A002ABFA1 /* screen5.swift */,
+			);
+			path = "First task";
+			sourceTree = "<group>";
+		};
+		FA49F723284807EE002ABFA1 /* SecondTask */ = {
+			isa = PBXGroup;
+			children = (
+				FA49F71C2848079B002ABFA1 /* SecondTaskViewController.swift */,
+				FA49F72C2848213F002ABFA1 /* File.swift */,
+				FAC397C3284914A200204BE3 /* ClassToShow.swift */,
+				FA49F720284807BF002ABFA1 /* SecondTaskStoryboard.storyboard */,
+			);
+			path = SecondTask;
+			sourceTree = "<group>";
+		};
 		FAC34C1828249F670061F3D8 = {
 			isa = PBXGroup;
 			children = (
@@ -66,15 +132,12 @@
 			children = (
 				FAC34C2428249F670061F3D8 /* AppDelegate.swift */,
 				FAC34C2628249F670061F3D8 /* SceneDelegate.swift */,
-				FAC34C2828249F670061F3D8 /* ViewController.swift */,
-				FA13DD3F283EB98B005AC95D /* secondVC.swift */,
-				FA4BD90C283ECBB200873F33 /* thirdVC.swift */,
+				FA49F722284807D9002ABFA1 /* First task */,
+				FA49F723284807EE002ABFA1 /* SecondTask */,
+				FA49F71928480527002ABFA1 /* Cat+square+races */,
 				FAC34C2D28249F690061F3D8 /* Assets.xcassets */,
-				FAC34C2A28249F670061F3D8 /* Main.storyboard */,
-				FA4BD910283EE09700873F33 /* SecondView.storyboard */,
-				FA4BD90E283ED04600873F33 /* ThirdView.storyboard */,
-				FAC34C2F28249F690061F3D8 /* LaunchScreen.storyboard */,
 				FAC34C3228249F690061F3D8 /* Info.plist */,
+				FAC34C2F28249F690061F3D8 /* LaunchScreen.storyboard */,
 			);
 			path = homework;
 			sourceTree = "<group>";
@@ -138,10 +201,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAC34C3128249F690061F3D8 /* LaunchScreen.storyboard in Resources */,
-				FA4BD90F283ED04600873F33 /* ThirdView.storyboard in Resources */,
+				FA49F7102847FBDE002ABFA1 /* Races.storyboard in Resources */,
 				FAC34C2E28249F690061F3D8 /* Assets.xcassets in Resources */,
-				FA4BD911283EE09700873F33 /* SecondView.storyboard in Resources */,
 				FAC34C2C28249F670061F3D8 /* Main.storyboard in Resources */,
+				FA49F721284807BF002ABFA1 /* SecondTaskStoryboard.storyboard in Resources */,
+				FA49F71F284807AD002ABFA1 /* FirstTaskStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,9 +217,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA4BD90D283ECBB200873F33 /* thirdVC.swift in Sources */,
+				FA49F7162847FE63002ABFA1 /* ScoresRaces.swift in Sources */,
+				FA49F72528481470002ABFA1 /* screen2.swift in Sources */,
+				FA49F7122847FBEE002ABFA1 /* RacesViewController.swift in Sources */,
+				FAC397C4284914A200204BE3 /* ClassToShow.swift in Sources */,
 				FAC34C2928249F670061F3D8 /* ViewController.swift in Sources */,
+				FA49F72D2848213F002ABFA1 /* File.swift in Sources */,
 				FAC34C2528249F670061F3D8 /* AppDelegate.swift in Sources */,
+				FA49F71D2848079B002ABFA1 /* SecondTaskViewController.swift in Sources */,
+				FA49F7182847FE72002ABFA1 /* SettingsRaces.swift in Sources */,
+				FA49F72B2848148A002ABFA1 /* screen5.swift in Sources */,
 				FA13DD40283EB98B005AC95D /* secondVC.swift in Sources */,
+				FA49F7142847FE52002ABFA1 /* PlayRaces.swift in Sources */,
+				FA49F7272848147B002ABFA1 /* screen3.swift in Sources */,
+				FA49F71B28480783002ABFA1 /* FirstTaskViewController.swift in Sources */,
+				FA49F72928481480002ABFA1 /* screen4.swift in Sources */,
 				FAC34C2728249F670061F3D8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
