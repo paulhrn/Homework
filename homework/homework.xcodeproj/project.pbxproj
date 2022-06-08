@@ -23,6 +23,9 @@
 		FA49F72B2848148A002ABFA1 /* screen5.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49F72A2848148A002ABFA1 /* screen5.swift */; };
 		FA49F72D2848213F002ABFA1 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49F72C2848213F002ABFA1 /* File.swift */; };
 		FA4BD90D283ECBB200873F33 /* thirdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4BD90C283ECBB200873F33 /* thirdVC.swift */; };
+		FA7C3888284E991900ADDB05 /* CircleMoving.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA7C3887284E991900ADDB05 /* CircleMoving.storyboard */; };
+		FAB3E610284E96FB00F15E05 /* Circle Moves.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB3E60F284E96FB00F15E05 /* Circle Moves.swift */; };
+		FAB3E612284E970C00F15E05 /* Initial for Circle Moves.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB3E611284E970C00F15E05 /* Initial for Circle Moves.swift */; };
 		FAC34C2528249F670061F3D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC34C2428249F670061F3D8 /* AppDelegate.swift */; };
 		FAC34C2728249F670061F3D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC34C2628249F670061F3D8 /* SceneDelegate.swift */; };
 		FAC34C2928249F670061F3D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC34C2828249F670061F3D8 /* ViewController.swift */; };
@@ -30,6 +33,9 @@
 		FAC34C2E28249F690061F3D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC34C2D28249F690061F3D8 /* Assets.xcassets */; };
 		FAC34C3128249F690061F3D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC34C2F28249F690061F3D8 /* LaunchScreen.storyboard */; };
 		FAC397C4284914A200204BE3 /* ClassToShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC397C3284914A200204BE3 /* ClassToShow.swift */; };
+		FACB2AA5284E91FC001EAE55 /* Circle when Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB2AA4284E91FC001EAE55 /* Circle when Tap.swift */; };
+		FACB2AA7284E9250001EAE55 /* CircleWhenTap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACB2AA6284E9250001EAE55 /* CircleWhenTap.storyboard */; };
+		FACB2AAB284E938A001EAE55 /* Initial for Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB2AAA284E938A001EAE55 /* Initial for Circle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +55,9 @@
 		FA49F72A2848148A002ABFA1 /* screen5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = screen5.swift; sourceTree = "<group>"; };
 		FA49F72C2848213F002ABFA1 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		FA4BD90C283ECBB200873F33 /* thirdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thirdVC.swift; sourceTree = "<group>"; };
+		FA7C3887284E991900ADDB05 /* CircleMoving.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CircleMoving.storyboard; sourceTree = "<group>"; };
+		FAB3E60F284E96FB00F15E05 /* Circle Moves.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Circle Moves.swift"; sourceTree = "<group>"; };
+		FAB3E611284E970C00F15E05 /* Initial for Circle Moves.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Initial for Circle Moves.swift"; sourceTree = "<group>"; };
 		FAC34C2128249F670061F3D8 /* homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = homework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC34C2428249F670061F3D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAC34C2628249F670061F3D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +67,9 @@
 		FAC34C3028249F690061F3D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAC34C3228249F690061F3D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAC397C3284914A200204BE3 /* ClassToShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassToShow.swift; sourceTree = "<group>"; };
+		FACB2AA4284E91FC001EAE55 /* Circle when Tap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Circle when Tap.swift"; sourceTree = "<group>"; };
+		FACB2AA6284E9250001EAE55 /* CircleWhenTap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CircleWhenTap.storyboard; sourceTree = "<group>"; };
+		FACB2AAA284E938A001EAE55 /* Initial for Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Initial for Circle.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +123,16 @@
 			path = SecondTask;
 			sourceTree = "<group>";
 		};
+		FAB3E615284E976100F15E05 /* Moving Circle */ = {
+			isa = PBXGroup;
+			children = (
+				FAB3E611284E970C00F15E05 /* Initial for Circle Moves.swift */,
+				FAB3E60F284E96FB00F15E05 /* Circle Moves.swift */,
+				FA7C3887284E991900ADDB05 /* CircleMoving.storyboard */,
+			);
+			path = "Moving Circle";
+			sourceTree = "<group>";
+		};
 		FAC34C1828249F670061F3D8 = {
 			isa = PBXGroup;
 			children = (
@@ -132,14 +154,34 @@
 			children = (
 				FAC34C2428249F670061F3D8 /* AppDelegate.swift */,
 				FAC34C2628249F670061F3D8 /* SceneDelegate.swift */,
-				FA49F722284807D9002ABFA1 /* First task */,
-				FA49F723284807EE002ABFA1 /* SecondTask */,
-				FA49F71928480527002ABFA1 /* Cat+square+races */,
+				FACB2AA9284E926E001EAE55 /* Circle Tap */,
+				FAB3E615284E976100F15E05 /* Moving Circle */,
+				FACB2AA3284E8F28001EAE55 /* Navigation added to 7 */,
 				FAC34C2D28249F690061F3D8 /* Assets.xcassets */,
 				FAC34C3228249F690061F3D8 /* Info.plist */,
 				FAC34C2F28249F690061F3D8 /* LaunchScreen.storyboard */,
 			);
 			path = homework;
+			sourceTree = "<group>";
+		};
+		FACB2AA3284E8F28001EAE55 /* Navigation added to 7 */ = {
+			isa = PBXGroup;
+			children = (
+				FA49F722284807D9002ABFA1 /* First task */,
+				FA49F723284807EE002ABFA1 /* SecondTask */,
+				FA49F71928480527002ABFA1 /* Cat+square+races */,
+			);
+			path = "Navigation added to 7";
+			sourceTree = "<group>";
+		};
+		FACB2AA9284E926E001EAE55 /* Circle Tap */ = {
+			isa = PBXGroup;
+			children = (
+				FACB2AAA284E938A001EAE55 /* Initial for Circle.swift */,
+				FACB2AA4284E91FC001EAE55 /* Circle when Tap.swift */,
+				FACB2AA6284E9250001EAE55 /* CircleWhenTap.storyboard */,
+			);
+			path = "Circle Tap";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,7 +242,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA7C3888284E991900ADDB05 /* CircleMoving.storyboard in Resources */,
 				FAC34C3128249F690061F3D8 /* LaunchScreen.storyboard in Resources */,
+				FACB2AA7284E9250001EAE55 /* CircleWhenTap.storyboard in Resources */,
 				FA49F7102847FBDE002ABFA1 /* Races.storyboard in Resources */,
 				FAC34C2E28249F690061F3D8 /* Assets.xcassets in Resources */,
 				FAC34C2C28249F670061F3D8 /* Main.storyboard in Resources */,
@@ -216,13 +260,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FACB2AAB284E938A001EAE55 /* Initial for Circle.swift in Sources */,
 				FA4BD90D283ECBB200873F33 /* thirdVC.swift in Sources */,
 				FA49F7162847FE63002ABFA1 /* ScoresRaces.swift in Sources */,
 				FA49F72528481470002ABFA1 /* screen2.swift in Sources */,
 				FA49F7122847FBEE002ABFA1 /* RacesViewController.swift in Sources */,
+				FAB3E612284E970C00F15E05 /* Initial for Circle Moves.swift in Sources */,
 				FAC397C4284914A200204BE3 /* ClassToShow.swift in Sources */,
+				FACB2AA5284E91FC001EAE55 /* Circle when Tap.swift in Sources */,
 				FAC34C2928249F670061F3D8 /* ViewController.swift in Sources */,
 				FA49F72D2848213F002ABFA1 /* File.swift in Sources */,
+				FAB3E610284E96FB00F15E05 /* Circle Moves.swift in Sources */,
 				FAC34C2528249F670061F3D8 /* AppDelegate.swift in Sources */,
 				FA49F71D2848079B002ABFA1 /* SecondTaskViewController.swift in Sources */,
 				FA49F7182847FE72002ABFA1 /* SettingsRaces.swift in Sources */,
