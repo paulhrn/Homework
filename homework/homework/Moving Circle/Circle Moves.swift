@@ -49,25 +49,24 @@ class CircleMoves: UIViewController {
     }
     
     @objc private func move(with: UISwipeGestureRecognizer) {
-        if with.direction == .up {
+        switch with.direction {
+        case .up:
             if movingCircle.frame.maxY - movingCircle.frame.height >= 55 {
                 movingCircle.center.y -= 20
             }
-        }
-        else if with.direction == .down {
+        case .down:
             if movingCircle.frame.maxY - movingCircle.frame.height <= 790 {
                 movingCircle.center.y += 20
             }
-        }
-        else if with.direction == .right {
+        case .right:
             if movingCircle.frame.maxX - movingCircle.frame.height <= 320 {
                 movingCircle.center.x += 20
             }
-        }
-        else if with.direction == .left {
+        case .left:
             if movingCircle.frame.maxX - movingCircle.frame.height >= 10 {
                 movingCircle.center.x -= 20
             }
+        default: break
         }
         color()
     }

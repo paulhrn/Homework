@@ -24,7 +24,6 @@ class Circle: UIViewController {
         
         tapView.addTarget(self, action: #selector(didTap2))
         forCats.addGestureRecognizer(tapView)
-        
     }
     
     // MARK: - Actions

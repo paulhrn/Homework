@@ -36,23 +36,17 @@ class RacesVC: UIViewController {
     private func play() {
         let storyboard = UIStoryboard(name: "Races", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "PlayRacesV")
-        viewController.modalPresentationStyle = .overFullScreen
-        viewController.modalTransitionStyle = .flipHorizontal
         navigationController?.pushViewController(viewController, animated: true)
     }
     
     private func scores() {
         let storyboard = UIStoryboard(name: "Races", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "ScoresRacesV")
-        viewController.modalPresentationStyle = .overFullScreen
-        viewController.modalTransitionStyle = .flipHorizontal
         navigationController?.pushViewController(viewController, animated: true)    }
     
     private func settings() {
         let storyboard = UIStoryboard(name: "Races", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "SettingsRacesV")
-        viewController.modalPresentationStyle = .overFullScreen
-        viewController.modalTransitionStyle = .flipHorizontal
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
