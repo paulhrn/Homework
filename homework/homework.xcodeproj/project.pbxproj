@@ -7,69 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA13DD40283EB98B005AC95D /* secondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA13DD3F283EB98B005AC95D /* secondVC.swift */; };
-		FA49F7102847FBDE002ABFA1 /* Races.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA49F70F2847FBDE002ABFA1 /* Races.storyboard */; };
-		FA49F7122847FBEE002ABFA1 /* RacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49F7112847FBEE002ABFA1 /* RacesViewController.swift */; };
-		FA49F7142847FE52002ABFA1 /* PlayRaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49F7132847FE52002ABFA1 /* PlayRaces.swift */; };
-		FA49F7162847FE63002ABFA1 /* ScoresRaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49F7152847FE63002ABFA1 /* ScoresRaces.swift */; };
-		FA49F7182847FE72002ABFA1 /* SettingsRaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49F7172847FE72002ABFA1 /* SettingsRaces.swift */; };
-		FA49F71B28480783002ABFA1 /* FirstTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49F71A28480783002ABFA1 /* FirstTaskViewController.swift */; };
-		FA49F71D2848079B002ABFA1 /* SecondTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49F71C2848079B002ABFA1 /* SecondTaskViewController.swift */; };
-		FA49F71F284807AD002ABFA1 /* FirstTaskStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA49F71E284807AD002ABFA1 /* FirstTaskStoryboard.storyboard */; };
-		FA49F721284807BF002ABFA1 /* SecondTaskStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA49F720284807BF002ABFA1 /* SecondTaskStoryboard.storyboard */; };
-		FA49F72528481470002ABFA1 /* screen2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49F72428481470002ABFA1 /* screen2.swift */; };
-		FA49F7272848147B002ABFA1 /* screen3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49F7262848147B002ABFA1 /* screen3.swift */; };
-		FA49F72928481480002ABFA1 /* screen4.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49F72828481480002ABFA1 /* screen4.swift */; };
-		FA49F72B2848148A002ABFA1 /* screen5.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49F72A2848148A002ABFA1 /* screen5.swift */; };
-		FA49F72D2848213F002ABFA1 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49F72C2848213F002ABFA1 /* File.swift */; };
-		FA4BD90D283ECBB200873F33 /* thirdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4BD90C283ECBB200873F33 /* thirdVC.swift */; };
-		FA7C3888284E991900ADDB05 /* CircleMoving.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA7C3887284E991900ADDB05 /* CircleMoving.storyboard */; };
-		FAB3E610284E96FB00F15E05 /* Circle Moves.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB3E60F284E96FB00F15E05 /* Circle Moves.swift */; };
-		FAB3E612284E970C00F15E05 /* Initial for Circle Moves.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB3E611284E970C00F15E05 /* Initial for Circle Moves.swift */; };
+		FAA6AFA9285655BE009EC18A /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA6AFA8285655BE009EC18A /* Calculator.swift */; };
 		FAC34C2528249F670061F3D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC34C2428249F670061F3D8 /* AppDelegate.swift */; };
 		FAC34C2728249F670061F3D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC34C2628249F670061F3D8 /* SceneDelegate.swift */; };
 		FAC34C2928249F670061F3D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC34C2828249F670061F3D8 /* ViewController.swift */; };
-		FAC34C2C28249F670061F3D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC34C2A28249F670061F3D8 /* Main.storyboard */; };
 		FAC34C2E28249F690061F3D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC34C2D28249F690061F3D8 /* Assets.xcassets */; };
 		FAC34C3128249F690061F3D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC34C2F28249F690061F3D8 /* LaunchScreen.storyboard */; };
-		FAC397C4284914A200204BE3 /* ClassToShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC397C3284914A200204BE3 /* ClassToShow.swift */; };
-		FACB2AA5284E91FC001EAE55 /* Circle when Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB2AA4284E91FC001EAE55 /* Circle when Tap.swift */; };
-		FACB2AA7284E9250001EAE55 /* CircleWhenTap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACB2AA6284E9250001EAE55 /* CircleWhenTap.storyboard */; };
-		FACB2AAB284E938A001EAE55 /* Initial for Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB2AAA284E938A001EAE55 /* Initial for Circle.swift */; };
+		FAFD5F132852C9BA009DD4F4 /* Squares Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFD5F122852C9BA009DD4F4 /* Squares Storyboard.storyboard */; };
+		FAFD5F152852C9C6009DD4F4 /* Squares ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD5F142852C9C6009DD4F4 /* Squares ViewController.swift */; };
+		FAFD83672851473700798D80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFD83662851473700798D80 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FA13DD3F283EB98B005AC95D /* secondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondVC.swift; sourceTree = "<group>"; };
-		FA49F70F2847FBDE002ABFA1 /* Races.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Races.storyboard; sourceTree = "<group>"; };
-		FA49F7112847FBEE002ABFA1 /* RacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacesViewController.swift; sourceTree = "<group>"; };
-		FA49F7132847FE52002ABFA1 /* PlayRaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRaces.swift; sourceTree = "<group>"; };
-		FA49F7152847FE63002ABFA1 /* ScoresRaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresRaces.swift; sourceTree = "<group>"; };
-		FA49F7172847FE72002ABFA1 /* SettingsRaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRaces.swift; sourceTree = "<group>"; };
-		FA49F71A28480783002ABFA1 /* FirstTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTaskViewController.swift; sourceTree = "<group>"; };
-		FA49F71C2848079B002ABFA1 /* SecondTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTaskViewController.swift; sourceTree = "<group>"; };
-		FA49F71E284807AD002ABFA1 /* FirstTaskStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirstTaskStoryboard.storyboard; sourceTree = "<group>"; };
-		FA49F720284807BF002ABFA1 /* SecondTaskStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondTaskStoryboard.storyboard; sourceTree = "<group>"; };
-		FA49F72428481470002ABFA1 /* screen2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = screen2.swift; sourceTree = "<group>"; };
-		FA49F7262848147B002ABFA1 /* screen3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = screen3.swift; sourceTree = "<group>"; };
-		FA49F72828481480002ABFA1 /* screen4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = screen4.swift; sourceTree = "<group>"; };
-		FA49F72A2848148A002ABFA1 /* screen5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = screen5.swift; sourceTree = "<group>"; };
-		FA49F72C2848213F002ABFA1 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
-		FA4BD90C283ECBB200873F33 /* thirdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thirdVC.swift; sourceTree = "<group>"; };
-		FA7C3887284E991900ADDB05 /* CircleMoving.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CircleMoving.storyboard; sourceTree = "<group>"; };
-		FAB3E60F284E96FB00F15E05 /* Circle Moves.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Circle Moves.swift"; sourceTree = "<group>"; };
-		FAB3E611284E970C00F15E05 /* Initial for Circle Moves.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Initial for Circle Moves.swift"; sourceTree = "<group>"; };
+		FAA6AFA8285655BE009EC18A /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		FAC34C2128249F670061F3D8 /* homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = homework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC34C2428249F670061F3D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAC34C2628249F670061F3D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FAC34C2828249F670061F3D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FAC34C2B28249F670061F3D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAC34C2D28249F690061F3D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAC34C3028249F690061F3D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAC34C3228249F690061F3D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FAC397C3284914A200204BE3 /* ClassToShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassToShow.swift; sourceTree = "<group>"; };
-		FACB2AA4284E91FC001EAE55 /* Circle when Tap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Circle when Tap.swift"; sourceTree = "<group>"; };
-		FACB2AA6284E9250001EAE55 /* CircleWhenTap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CircleWhenTap.storyboard; sourceTree = "<group>"; };
-		FACB2AAA284E938A001EAE55 /* Initial for Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Initial for Circle.swift"; sourceTree = "<group>"; };
+		FAFD5F122852C9BA009DD4F4 /* Squares Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Squares Storyboard.storyboard"; sourceTree = "<group>"; };
+		FAFD5F142852C9C6009DD4F4 /* Squares ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Squares ViewController.swift"; sourceTree = "<group>"; };
+		FAFD83662851473700798D80 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,54 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FA49F71928480527002ABFA1 /* Cat+square+races */ = {
+		FA72A4A12852BED400E8FE10 /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
 				FAC34C2828249F670061F3D8 /* ViewController.swift */,
-				FA4BD90C283ECBB200873F33 /* thirdVC.swift */,
-				FA13DD3F283EB98B005AC95D /* secondVC.swift */,
-				FAC34C2A28249F670061F3D8 /* Main.storyboard */,
-				FA49F7112847FBEE002ABFA1 /* RacesViewController.swift */,
-				FA49F7132847FE52002ABFA1 /* PlayRaces.swift */,
-				FA49F7152847FE63002ABFA1 /* ScoresRaces.swift */,
-				FA49F7172847FE72002ABFA1 /* SettingsRaces.swift */,
-				FA49F70F2847FBDE002ABFA1 /* Races.storyboard */,
+				FAA6AFA8285655BE009EC18A /* Calculator.swift */,
+				FAFD83662851473700798D80 /* Main.storyboard */,
 			);
-			path = "Cat+square+races";
-			sourceTree = "<group>";
-		};
-		FA49F722284807D9002ABFA1 /* First task */ = {
-			isa = PBXGroup;
-			children = (
-				FA49F71A28480783002ABFA1 /* FirstTaskViewController.swift */,
-				FA49F71E284807AD002ABFA1 /* FirstTaskStoryboard.storyboard */,
-				FA49F72428481470002ABFA1 /* screen2.swift */,
-				FA49F7262848147B002ABFA1 /* screen3.swift */,
-				FA49F72828481480002ABFA1 /* screen4.swift */,
-				FA49F72A2848148A002ABFA1 /* screen5.swift */,
-			);
-			path = "First task";
-			sourceTree = "<group>";
-		};
-		FA49F723284807EE002ABFA1 /* SecondTask */ = {
-			isa = PBXGroup;
-			children = (
-				FA49F71C2848079B002ABFA1 /* SecondTaskViewController.swift */,
-				FA49F72C2848213F002ABFA1 /* File.swift */,
-				FAC397C3284914A200204BE3 /* ClassToShow.swift */,
-				FA49F720284807BF002ABFA1 /* SecondTaskStoryboard.storyboard */,
-			);
-			path = SecondTask;
-			sourceTree = "<group>";
-		};
-		FAB3E615284E976100F15E05 /* Moving Circle */ = {
-			isa = PBXGroup;
-			children = (
-				FAB3E611284E970C00F15E05 /* Initial for Circle Moves.swift */,
-				FAB3E60F284E96FB00F15E05 /* Circle Moves.swift */,
-				FA7C3887284E991900ADDB05 /* CircleMoving.storyboard */,
-			);
-			path = "Moving Circle";
+			path = Calculator;
 			sourceTree = "<group>";
 		};
 		FAC34C1828249F670061F3D8 = {
@@ -154,9 +74,8 @@
 			children = (
 				FAC34C2428249F670061F3D8 /* AppDelegate.swift */,
 				FAC34C2628249F670061F3D8 /* SceneDelegate.swift */,
-				FACB2AA9284E926E001EAE55 /* Circle Tap */,
-				FAB3E615284E976100F15E05 /* Moving Circle */,
-				FACB2AA3284E8F28001EAE55 /* Navigation added to 7 */,
+				FA72A4A12852BED400E8FE10 /* Calculator */,
+				FAFD5F162852C9CC009DD4F4 /* Squares */,
 				FAC34C2D28249F690061F3D8 /* Assets.xcassets */,
 				FAC34C3228249F690061F3D8 /* Info.plist */,
 				FAC34C2F28249F690061F3D8 /* LaunchScreen.storyboard */,
@@ -164,24 +83,13 @@
 			path = homework;
 			sourceTree = "<group>";
 		};
-		FACB2AA3284E8F28001EAE55 /* Navigation added to 7 */ = {
+		FAFD5F162852C9CC009DD4F4 /* Squares */ = {
 			isa = PBXGroup;
 			children = (
-				FA49F722284807D9002ABFA1 /* First task */,
-				FA49F723284807EE002ABFA1 /* SecondTask */,
-				FA49F71928480527002ABFA1 /* Cat+square+races */,
+				FAFD5F142852C9C6009DD4F4 /* Squares ViewController.swift */,
+				FAFD5F122852C9BA009DD4F4 /* Squares Storyboard.storyboard */,
 			);
-			path = "Navigation added to 7";
-			sourceTree = "<group>";
-		};
-		FACB2AA9284E926E001EAE55 /* Circle Tap */ = {
-			isa = PBXGroup;
-			children = (
-				FACB2AAA284E938A001EAE55 /* Initial for Circle.swift */,
-				FACB2AA4284E91FC001EAE55 /* Circle when Tap.swift */,
-				FACB2AA6284E9250001EAE55 /* CircleWhenTap.storyboard */,
-			);
-			path = "Circle Tap";
+			path = Squares;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,14 +150,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA7C3888284E991900ADDB05 /* CircleMoving.storyboard in Resources */,
 				FAC34C3128249F690061F3D8 /* LaunchScreen.storyboard in Resources */,
-				FACB2AA7284E9250001EAE55 /* CircleWhenTap.storyboard in Resources */,
-				FA49F7102847FBDE002ABFA1 /* Races.storyboard in Resources */,
+				FAFD5F132852C9BA009DD4F4 /* Squares Storyboard.storyboard in Resources */,
 				FAC34C2E28249F690061F3D8 /* Assets.xcassets in Resources */,
-				FAC34C2C28249F670061F3D8 /* Main.storyboard in Resources */,
-				FA49F721284807BF002ABFA1 /* SecondTaskStoryboard.storyboard in Resources */,
-				FA49F71F284807AD002ABFA1 /* FirstTaskStoryboard.storyboard in Resources */,
+				FAFD83672851473700798D80 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,41 +164,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FACB2AAB284E938A001EAE55 /* Initial for Circle.swift in Sources */,
-				FA4BD90D283ECBB200873F33 /* thirdVC.swift in Sources */,
-				FA49F7162847FE63002ABFA1 /* ScoresRaces.swift in Sources */,
-				FA49F72528481470002ABFA1 /* screen2.swift in Sources */,
-				FA49F7122847FBEE002ABFA1 /* RacesViewController.swift in Sources */,
-				FAB3E612284E970C00F15E05 /* Initial for Circle Moves.swift in Sources */,
-				FAC397C4284914A200204BE3 /* ClassToShow.swift in Sources */,
-				FACB2AA5284E91FC001EAE55 /* Circle when Tap.swift in Sources */,
 				FAC34C2928249F670061F3D8 /* ViewController.swift in Sources */,
-				FA49F72D2848213F002ABFA1 /* File.swift in Sources */,
-				FAB3E610284E96FB00F15E05 /* Circle Moves.swift in Sources */,
 				FAC34C2528249F670061F3D8 /* AppDelegate.swift in Sources */,
-				FA49F71D2848079B002ABFA1 /* SecondTaskViewController.swift in Sources */,
-				FA49F7182847FE72002ABFA1 /* SettingsRaces.swift in Sources */,
-				FA49F72B2848148A002ABFA1 /* screen5.swift in Sources */,
-				FA13DD40283EB98B005AC95D /* secondVC.swift in Sources */,
-				FA49F7142847FE52002ABFA1 /* PlayRaces.swift in Sources */,
-				FA49F7272848147B002ABFA1 /* screen3.swift in Sources */,
-				FA49F71B28480783002ABFA1 /* FirstTaskViewController.swift in Sources */,
-				FA49F72928481480002ABFA1 /* screen4.swift in Sources */,
 				FAC34C2728249F670061F3D8 /* SceneDelegate.swift in Sources */,
+				FAFD5F152852C9C6009DD4F4 /* Squares ViewController.swift in Sources */,
+				FAA6AFA9285655BE009EC18A /* Calculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FAC34C2A28249F670061F3D8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FAC34C2B28249F670061F3D8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FAC34C2F28249F690061F3D8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
