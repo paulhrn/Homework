@@ -11,10 +11,25 @@ import UIKit
 class Squares: UIViewController {
     
     // MARK: - Private Properties
-    private let panGesture = UIPanGestureRecognizer()
-    private let tapGesture = UITapGestureRecognizer()
-    private let space: CGFloat = 10
-    private let heightWithSpace: CGFloat = 150
+    private let panGestureGreen = UIPanGestureRecognizer()
+    private let panGesturePink = UIPanGestureRecognizer()
+    private let panGestureYellow = UIPanGestureRecognizer()
+    private let panGestureTeal = UIPanGestureRecognizer()
+    
+    private let tapGestureGreen = UITapGestureRecognizer()
+    private let tapGesturePink = UITapGestureRecognizer()
+    private let tapGestureYellow = UITapGestureRecognizer()
+    private let tapGestureTeal = UITapGestureRecognizer()
+    
+    private let swipeUpGreen = UISwipeGestureRecognizer()
+    private let swipeUpPink = UISwipeGestureRecognizer()
+    private let swipeUpYellow = UISwipeGestureRecognizer()
+    private let swipeUpTeal = UISwipeGestureRecognizer()
+    
+    private let swipeDownGreen = UISwipeGestureRecognizer()
+    private let swipeDownPink = UISwipeGestureRecognizer()
+    private let swipeDownYellow = UISwipeGestureRecognizer()
+    private let swipeDownTeal = UISwipeGestureRecognizer()
     
     // MARK: - Outlets
     @IBOutlet weak var greenSquare: UIView!
@@ -22,59 +37,139 @@ class Squares: UIViewController {
     @IBOutlet weak var yellowSquare: UIView!
     @IBOutlet weak var tealSquare: UIView!
     @IBOutlet weak var Stack: UIStackView!
-    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var pinkWidth: NSLayoutConstraint!
     
-    @IBOutlet weak var tealWidth: NSLayoutConstraint!
-    @IBOutlet weak var yellowWidth: NSLayoutConstraint!
+    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var heightConstraintYellow: NSLayoutConstraint!
+    @IBOutlet weak var heightConstraintPink: NSLayoutConstraint!
+    @IBOutlet weak var heightConstraintGreen: NSLayoutConstraint!
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        panGesture.addTarget(self, action: #selector(pan))
-        view.addGestureRecognizer(panGesture)
-        
-        tapGesture.addTarget(self, action: #selector(tap))
-        tealSquare.addGestureRecognizer(tapGesture)
-        
+    
         view.bringSubviewToFront(Stack)
+        
+        // green square gestures
+        panGestureGreen.addTarget(self, action: #selector(panGreen))
+        greenSquare.addGestureRecognizer(panGestureGreen)
+        tapGestureGreen.addTarget(self, action: #selector(tapGreen))
+        greenSquare.addGestureRecognizer(tapGestureGreen)
+        swipeUpGreen.addTarget(self, action: #selector (greenUp))
+        swipeUpGreen.direction = .up
+        greenSquare.addGestureRecognizer(swipeUpGreen)
+        swipeDownGreen.addTarget(self, action: #selector (greenDown))
+        swipeDownGreen.direction = .down
+        greenSquare.addGestureRecognizer(swipeDownGreen)
+        
+        // pink square gestures
+        panGesturePink.addTarget(self, action: #selector(panPink))
+        pinkSquare.addGestureRecognizer(panGesturePink)
+        tapGesturePink.addTarget(self, action: #selector(tapPink))
+        pinkSquare.addGestureRecognizer(tapGesturePink)
+        swipeUpPink.addTarget(self, action: #selector (pinkUp))
+        swipeUpPink.direction = .up
+        pinkSquare.addGestureRecognizer(swipeUpPink)
+        swipeDownPink.addTarget(self, action: #selector (pinkDown))
+        swipeDownPink.direction = .down
+        pinkSquare.addGestureRecognizer(swipeDownPink)
+        
+        // yellow square gestures
+        panGestureYellow.addTarget(self, action: #selector(panYellow))
+        yellowSquare.addGestureRecognizer(panGestureYellow)
+        tapGestureYellow.addTarget(self, action: #selector(tapYellow))
+        yellowSquare.addGestureRecognizer(tapGestureYellow)
+        swipeUpYellow.addTarget(self, action: #selector (yellowUp))
+        swipeUpYellow.direction = .up
+        yellowSquare.addGestureRecognizer(swipeUpYellow)
+        
+        // teal square gestures
+        panGestureTeal.addTarget(self, action: #selector(panTeal))
+        tealSquare.addGestureRecognizer(panGestureTeal)
+        tapGestureTeal.addTarget(self, action: #selector(tapTeal))
+        tealSquare.addGestureRecognizer(tapGestureTeal)
+        swipeUpTeal.addTarget(self, action: #selector (tealUp))
+        swipeUpTeal.direction = .up
+        tealSquare.addGestureRecognizer(swipeUpTeal)
+        swipeDownTeal.addTarget(self, action: #selector (tealDown))
+        swipeDownTeal.direction = .down
+        tealSquare.addGestureRecognizer(swipeDownTeal)
     }
     
     // MARK: - Actions
-    @objc private func pan() {
-        greenSquare.frame.origin = CGPoint(x: panGesture.location(in: view).x - heightConstraint.constant - 10, y: panGesture.location(in: view).y - heightConstraint.constant - 10)
-        pinkSquare.frame.origin = CGPoint(x: panGesture.location(in: view).x + space, y: panGesture.location(in: view).y - pinkWidth.constant - 10)
-        yellowSquare.frame.origin = CGPoint(x: panGesture.location(in: view).x - heightWithSpace, y: panGesture.location(in: view).y + space)
-        tealSquare.frame.origin = CGPoint(x: panGesture.location(in: view).x + space, y: panGesture.location(in: view).y + space)
+    // green square funcs
+    @objc private func panGreen() {
+        greenSquare.frame.origin = CGPoint(x: panGestureGreen.location(in: view).x - heightConstraintGreen.constant / 2, y: panGestureGreen.location(in: view).y - heightConstraintGreen.constant / 2)
+        panGestureGreen.require(toFail: swipeUpGreen)
+        panGestureGreen.require(toFail: swipeDownGreen)
+    }
+    @objc private func tapGreen() {
+        greenSquare.isHidden = true
+    }
+    @objc private func greenUp() {
+        heightConstraintGreen.constant = 140
+    }
+    @objc private func greenDown() {
+        heightConstraintGreen.constant = 100
     }
     
-    @objc private func tap() {
-        heightConstraint.constant = 150
-        pinkWidth.constant = 100
-        yellowWidth.constant = 100
-        tealWidth.constant = 150
+    // pink square funcs
+    @objc private func panPink() {
+        pinkSquare.frame.origin = CGPoint(x: panGesturePink.location(in: view).x - heightConstraintPink.constant / 2, y: panGesturePink.location(in: view).y - heightConstraintPink.constant / 2)
+        panGesturePink.require(toFail: swipeUpPink)
+        panGesturePink.require(toFail: swipeDownPink)
+    }
+    @objc private func tapPink() {
+        pinkSquare.isHidden = true
+    }
+    @objc private func pinkUp() {
+        heightConstraintPink.constant = 140
+    }
+    @objc private func pinkDown() {
+        heightConstraintPink.constant = 100
     }
     
-    @IBAction func toHideRelocate(_ sender: Any) {
-        hideSquares(true)
+    // yellow square funcs
+    @objc private func panYellow() {
+        yellowSquare.frame.origin = CGPoint(x: panGestureYellow.location(in: view).x - heightConstraintYellow.constant / 2, y: panGestureYellow.location(in: view).y - heightConstraintYellow.constant / 2)
+        panGestureYellow.require(toFail: swipeUpYellow)
+        panGestureYellow.require(toFail: swipeDownYellow)
+    }
+    @objc private func tapYellow() {
+        yellowSquare.isHidden = true
+    }
+    @objc private func yellowUp() {
+        heightConstraintYellow.constant = 140
+    }
+    @objc private func yellowDown() {
+        heightConstraintYellow.constant = 100
+    }
+    
+    // teal square funcs
+    @objc private func panTeal() {
+        tealSquare.frame.origin = CGPoint(x: panGestureTeal.location(in: view).x - heightConstraint.constant / 2, y: panGestureTeal.location(in: view).y - heightConstraint.constant / 2)
+        panGestureTeal.require(toFail: swipeUpTeal)
+        panGestureTeal.require(toFail: swipeDownTeal)
+    }
+    @objc private func tapTeal() {
+        tealSquare.isHidden = true
+    }
+    @objc private func tealUp() {
+        heightConstraint.constant = 140
+    }
+    @objc private func tealDown() {
+        heightConstraint.constant = 100
     }
     
     @IBAction func initialPosition(_ sender: Any) {
-        hideSquares(false)
+        unhideSquares()
         backToLocation()
     }
     
     //MARK: - Private Funcs
-    private func hideSquares(_ bool: Bool) {
+    private func unhideSquares() {
         let squares = [greenSquare, pinkSquare, yellowSquare, tealSquare]
         for square in squares {
-            if bool == true {
-                square?.isHidden = true
-            }
-            else {
-                square?.isHidden = false
-            }
+            square?.isHidden = false
         }
     }
     
@@ -84,9 +179,8 @@ class Squares: UIViewController {
         yellowSquare.frame.origin = yellowSquare.frame.origin
         tealSquare.frame.origin = tealSquare.frame.origin
         heightConstraint.constant = 140
-        pinkWidth.constant = 140
-        yellowWidth.constant = 140
-        tealWidth.constant = 140
+        heightConstraintGreen.constant = 140
+        heightConstraintYellow.constant = 140
+        heightConstraintPink.constant = 140
     }
 }
-

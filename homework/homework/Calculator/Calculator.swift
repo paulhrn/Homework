@@ -19,7 +19,7 @@ class Calculator {
     var eachCase: cases?
     
     // MARK: - Public Funcs
-    func newNumber(_ newNumber: Float) -> Float {
+    func newNumber(_ newNumber: Float) {
         switch eachCase! {
         case .plus:
             plus(input, newNumber)
@@ -34,37 +34,30 @@ class Calculator {
         case .percent:
             percent(input)
         }
-        return result
     }
     
     // MARK: - Private Funcs
-    private func plus(_ number1: Float ,_ number2: Float) -> Float {
+    private func plus(_ number1: Float ,_ number2: Float) {
         result = number1 + number2
-        return result
     }
     
-    private func minus(_ number1: Float ,_ number2: Float) -> Float {
+    private func minus(_ number1: Float ,_ number2: Float) {
         result = number1 - number2
-        return result
     }
     
-    private func multiply(_ number1: Float ,_ number2: Float) -> Float {
+    private func multiply(_ number1: Float ,_ number2: Float) {
         result = number1 * number2
-        return result
     }
     
-    private func divides(_ number1: Float ,_ number2: Float) -> Float {
+    private func divides(_ number1: Float ,_ number2: Float) {
         result = number1 / number2
-        return result
     }
     
-    private func plusminus(_ number: Float) -> Float {
+    private func plusminus(_ number: Float) {
         result = -number
-        return result
     }
     
-    private func percent(_ number: Float) -> Float {
+    private func percent(_ number: Float) {
         result = number / 100
-        return result
     }
 }

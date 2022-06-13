@@ -54,7 +54,7 @@
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="erase:" destination="G5k-2q-eSi" eventType="touchUpInside" id="h2Z-Ed-bLZ"/>
+                                                            <action selector="erase:" destination="G5k-2q-eSi" eventType="touchUpInside" id="R3p-Gy-bw6"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jhs-aS-COz">
@@ -285,7 +285,7 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="results:" destination="G5k-2q-eSi" eventType="touchUpInside" id="Xg9-Dl-0vr"/>
+                                                            <action selector="results:" destination="G5k-2q-eSi" eventType="touchUpInside" id="fcl-MM-L43"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>

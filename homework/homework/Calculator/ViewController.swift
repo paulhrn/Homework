@@ -30,9 +30,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var button8: UIButton!
     @IBOutlet weak var button9: UIButton!
     
-    // Button for func 'erase'
-    @IBOutlet weak var ACButton: UIButton!
-    
     // Buttons for func 'operations'
     @IBOutlet weak var divideButton: UIButton!
     @IBOutlet weak var multiplyButton: UIButton!
@@ -41,12 +38,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var positivenegative: UIButton!
     @IBOutlet weak var percent: UIButton!
     
+    // Button for func 'erase'
+    @IBOutlet weak var ACButton: UIButton!
+    
     // Button for func 'results'
     @IBOutlet weak var resultButton: UIButton!
     
     // MARK: - Life Cycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         makeButtonsRound()
         swipe.addTarget(self, action: #selector(move))
@@ -71,10 +71,6 @@ class ViewController: UIViewController {
         else {
             resultLabel.text! = resultLabel.text! + (sender as! UIButton).titleLabel!.text!
         }
-    }
-    
-    @IBAction func erase(_ sender: Any) {
-        resultLabel.text = "0"
     }
     
     @IBAction func operations(_ sender: UIButton) {
@@ -103,7 +99,11 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func results(_ sender: UIButton) {
+    @IBAction func erase(_ sender: Any) {
+        resultLabel.text = "0"
+    }
+    
+    @IBAction func results(_ sender: Any) {
         forResults()
     }
     
