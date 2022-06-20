@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Scores RacesVC-->
+        <scene sceneID="mcg-z8-JxO">
+            <objects>
+                <viewController storyboardIdentifier="ScoresRacesV" id="fCz-pN-m6U" customClass="ScoresRacesVC" customModule="homework" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CLa-gb-Va1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scores" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qe0-60-CFd">
+                                <rect key="frame" x="20" y="64" width="374" height="107"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="107" id="W9y-5e-sgs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You lost😊" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="naD-qh-bzD">
+                                <rect key="frame" x="96" y="379" width="222" height="139"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mKe-hb-icb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qe0-60-CFd" firstAttribute="top" secondItem="mKe-hb-icb" secondAttribute="top" constant="20" id="NIN-lw-FHe"/>
+                            <constraint firstItem="mKe-hb-icb" firstAttribute="trailing" secondItem="naD-qh-bzD" secondAttribute="trailing" constant="96" id="P6G-vm-qlf"/>
+                            <constraint firstItem="naD-qh-bzD" firstAttribute="leading" secondItem="mKe-hb-icb" secondAttribute="leading" constant="96" id="SsW-nd-T3E"/>
+                            <constraint firstItem="mKe-hb-icb" firstAttribute="trailing" secondItem="Qe0-60-CFd" secondAttribute="trailing" constant="20" id="bko-X4-GmH"/>
+                            <constraint firstItem="Qe0-60-CFd" firstAttribute="leading" secondItem="mKe-hb-icb" secondAttribute="leading" constant="20" id="bnI-uY-tJ0"/>
+                            <constraint firstItem="mKe-hb-icb" firstAttribute="bottom" secondItem="naD-qh-bzD" secondAttribute="bottom" constant="344" id="ehM-18-iKi"/>
+                            <constraint firstItem="naD-qh-bzD" firstAttribute="top" secondItem="Qe0-60-CFd" secondAttribute="bottom" constant="208" id="t7B-Kq-1tp"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s4p-nM-7q3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="837.68115942028987" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
