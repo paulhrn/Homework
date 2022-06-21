@@ -80,11 +80,12 @@ class PlayRacesVC: UIViewController {
     }
     
     private func brickAnimation() {
-        mainTimer = Timer.scheduledTimer(withTimeInterval: 2.5, repeats: true) { [self] (timer1) in
-            animateConstraints()
-            Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [self] (timer2) in
-                if brick.layer.presentation()?.frame.intersects(car.frame) == true {
-                    navigationController?.popToRootViewController(animated: true)
+        mainTimer = Timer.scheduledTimer(withTimeInterval: 2.5, repeats: true) { [weak self] _ in
+            self?.animateConstraints()
+            Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [weak self] _ in
+                guard let carFrame = self?.car.frame else { return }
+                if self?.brick.layer.presentation()?.frame.intersects(carFrame) == true {
+                    self?.navigationController?.popToRootViewController(animated: true)
                 }
             }
         }
@@ -98,11 +99,12 @@ class PlayRacesVC: UIViewController {
         brickBottomConstraint.isActive = true
         UIView.animate(withDuration: 2.5, delay: 0, options: .repeat) {
             self.road.layoutIfNeeded()
-        } completion: { [self] _ in
-            if sideToChoose == true {
-                brickCenterXConstraint?.constant = -roadWidth.constant / 3.5
+        } completion: { [weak self] _ in
+            guard let widthConstant = self?.roadWidth.constant else { return }
+            if self?.sideToChoose == true {
+                self?.brickCenterXConstraint?.constant = -widthConstant / 3.5
             } else {
-                brickCenterXConstraint?.constant = roadWidth.constant / 3.5
+                self?.brickCenterXConstraint?.constant = widthConstant / 3.5
             }
         }
     }
