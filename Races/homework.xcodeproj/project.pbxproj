@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA406B8E2863AF1800AB6D24 /* Pacifico.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA406B8A2863AE6500AB6D24 /* Pacifico.ttf */; };
+		FA406B902863AF1C00AB6D24 /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA406B8D2863AF1700AB6D24 /* Raleway-SemiBold.ttf */; };
+		FA406B932863B23E00AB6D24 /* JosefinSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA406B922863B23C00AB6D24 /* JosefinSans-SemiBold.ttf */; };
 		FA49F7122847FBEE002ABFA1 /* RacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49F7112847FBEE002ABFA1 /* RacesViewController.swift */; };
 		FA49F7142847FE52002ABFA1 /* PlayRaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49F7132847FE52002ABFA1 /* PlayRaces.swift */; };
 		FA49F7162847FE63002ABFA1 /* ScoresRaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49F7152847FE63002ABFA1 /* ScoresRaces.swift */; };
 		FA49F7182847FE72002ABFA1 /* SettingsRaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49F7172847FE72002ABFA1 /* SettingsRaces.swift */; };
+		FA811A75286F0F41000D1D31 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA811A74286F0F41000D1D31 /* Extensions.swift */; };
 		FA9531D3285A1852001572CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA9531D2285A1852001572CC /* Main.storyboard */; };
 		FAC34C2528249F670061F3D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC34C2428249F670061F3D8 /* AppDelegate.swift */; };
 		FAC34C2728249F670061F3D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC34C2628249F670061F3D8 /* SceneDelegate.swift */; };
@@ -22,10 +26,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA406B8A2863AE6500AB6D24 /* Pacifico.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pacifico.ttf; sourceTree = "<group>"; };
+		FA406B8D2863AF1700AB6D24 /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
+		FA406B922863B23C00AB6D24 /* JosefinSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		FA49F7112847FBEE002ABFA1 /* RacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacesViewController.swift; sourceTree = "<group>"; };
 		FA49F7132847FE52002ABFA1 /* PlayRaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRaces.swift; sourceTree = "<group>"; };
 		FA49F7152847FE63002ABFA1 /* ScoresRaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresRaces.swift; sourceTree = "<group>"; };
 		FA49F7172847FE72002ABFA1 /* SettingsRaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRaces.swift; sourceTree = "<group>"; };
+		FA811A74286F0F41000D1D31 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FA9531D2285A1852001572CC /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FAC34C2128249F670061F3D8 /* homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = homework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC34C2428249F670061F3D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +57,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA406B852863AA8600AB6D24 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FA406B8A2863AE6500AB6D24 /* Pacifico.ttf */,
+				FA406B8D2863AF1700AB6D24 /* Raleway-SemiBold.ttf */,
+				FA406B922863B23C00AB6D24 /* JosefinSans-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		FA811A76286F1044000D1D31 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FA9531D2285A1852001572CC /* Main.storyboard */,
+				FAED2F6A285CA559008568E2 /* Play.storyboard */,
+				FAED2F6C285CA564008568E2 /* Scores.storyboard */,
+				FAED2F6E285CA56B008568E2 /* Settings.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FA811A77286F1055000D1D31 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA49F7112847FBEE002ABFA1 /* RacesViewController.swift */,
+				FA49F7132847FE52002ABFA1 /* PlayRaces.swift */,
+				FA49F7152847FE63002ABFA1 /* ScoresRaces.swift */,
+				FA49F7172847FE72002ABFA1 /* SettingsRaces.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		FAC34C1828249F670061F3D8 = {
 			isa = PBXGroup;
 			children = (
@@ -70,14 +110,10 @@
 			children = (
 				FAC34C2428249F670061F3D8 /* AppDelegate.swift */,
 				FAC34C2628249F670061F3D8 /* SceneDelegate.swift */,
-				FA49F7112847FBEE002ABFA1 /* RacesViewController.swift */,
-				FA9531D2285A1852001572CC /* Main.storyboard */,
-				FA49F7132847FE52002ABFA1 /* PlayRaces.swift */,
-				FAED2F6A285CA559008568E2 /* Play.storyboard */,
-				FA49F7152847FE63002ABFA1 /* ScoresRaces.swift */,
-				FAED2F6C285CA564008568E2 /* Scores.storyboard */,
-				FA49F7172847FE72002ABFA1 /* SettingsRaces.swift */,
-				FAED2F6E285CA56B008568E2 /* Settings.storyboard */,
+				FA811A77286F1055000D1D31 /* ViewControllers */,
+				FA811A74286F0F41000D1D31 /* Extensions.swift */,
+				FA811A76286F1044000D1D31 /* Storyboards */,
+				FA406B852863AA8600AB6D24 /* Fonts */,
 				FAC34C2D28249F690061F3D8 /* Assets.xcassets */,
 				FAC34C3228249F690061F3D8 /* Info.plist */,
 				FAC34C2F28249F690061F3D8 /* LaunchScreen.storyboard */,
@@ -143,11 +179,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA406B902863AF1C00AB6D24 /* Raleway-SemiBold.ttf in Resources */,
 				FAC34C3128249F690061F3D8 /* LaunchScreen.storyboard in Resources */,
 				FAED2F6D285CA564008568E2 /* Scores.storyboard in Resources */,
 				FAC34C2E28249F690061F3D8 /* Assets.xcassets in Resources */,
 				FA9531D3285A1852001572CC /* Main.storyboard in Resources */,
+				FA406B8E2863AF1800AB6D24 /* Pacifico.ttf in Resources */,
 				FAED2F6B285CA559008568E2 /* Play.storyboard in Resources */,
+				FA406B932863B23E00AB6D24 /* JosefinSans-SemiBold.ttf in Resources */,
 				FAED2F6F285CA56B008568E2 /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,6 +204,7 @@
 				FA49F7182847FE72002ABFA1 /* SettingsRaces.swift in Sources */,
 				FA49F7142847FE52002ABFA1 /* PlayRaces.swift in Sources */,
 				FAC34C2728249F670061F3D8 /* SceneDelegate.swift in Sources */,
+				FA811A75286F0F41000D1D31 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,11 +15,7 @@ class ViewController: UIViewController {
         view.contentMode = .scaleToFill
         return view
     }()
-    private let image1 = UIImage(named: "first")
-    private let image2 = UIImage(named: "second")
-    private let image3 = UIImage(named: "third")
-    private let image4 = UIImage(named: "fourth")
-    private let image5 = UIImage(named: "fifth")
+    private let images = [UIImage(named: "first"), UIImage(named: "second"), UIImage(named: "third"), UIImage(named: "fourth"), UIImage(named: "fifth")]
     private var imageViewTopAnchor: NSLayoutConstraint?
     private var imageViewLeadingAnchor: NSLayoutConstraint?
     private var imageViewTrailingAnchor: NSLayoutConstraint?
@@ -42,26 +38,25 @@ class ViewController: UIViewController {
     
     // MARK: - Actions
     @objc private func swipeLeft() {
-        let images = [image1, image2, image3, image4, image5]
         imageView.image = images.randomElement() as? UIImage
         imageView.addShadow(shadowColor: .darkGray, offset: .init(width: 10, height: 10), radius: 20, opacity: 1)
         
-        imageViewLeadingAnchor?.isActive = false
-        imageViewTrailingAnchor?.isActive = false
+        imageViewLeadingAnchor?.isInactive()
+        imageViewTrailingAnchor?.isInactive()
         UIView.animate(withDuration: 4.5) {
             self.imageViewLeadingAnchor?.constant = 10
             self.imageViewTrailingAnchor?.constant = -10
-            self.imageViewLeadingAnchor?.isActive = true
-            self.imageViewTrailingAnchor?.isActive = true
+            self.imageViewLeadingAnchor?.isActive()
+            self.imageViewTrailingAnchor?.isActive()
             self.view.layoutIfNeeded()
         } completion: { _ in
-            self.imageViewLeadingAnchor?.isActive = false
-            self.imageViewTrailingAnchor?.isActive = false
+            self.imageViewLeadingAnchor?.isInactive()
+            self.imageViewTrailingAnchor?.isInactive()
             UIView.animate(withDuration: 4.5) {
                 self.imageViewLeadingAnchor?.constant = 600
                 self.imageViewTrailingAnchor?.constant = 600
-                self.imageViewLeadingAnchor?.isActive = true
-                self.imageViewTrailingAnchor?.isActive = true
+                self.imageViewLeadingAnchor?.isActive()
+                self.imageViewTrailingAnchor?.isActive()
                 self.view.layoutIfNeeded()
             }
         }
@@ -76,10 +71,10 @@ class ViewController: UIViewController {
         imageViewTrailingAnchor = imageView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 600)
         imageViewBottomAnchor = imageView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -100)
         
-        imageViewTopAnchor?.isActive = true
-        imageViewLeadingAnchor?.isActive = true
-        imageViewTrailingAnchor?.isActive = true
-        imageViewBottomAnchor?.isActive = true
+        imageViewTopAnchor?.isActive()
+        imageViewLeadingAnchor?.isActive()
+        imageViewTrailingAnchor?.isActive()
+        imageViewBottomAnchor?.isActive()
     }
 }
 
@@ -99,5 +94,15 @@ extension UIView {
         gradient.locations = locations
         gradient.frame = layer.bounds
         layer.insertSublayer(gradient, at: 1)
+    }
+}
+
+extension NSLayoutConstraint {
+    func isActive() {
+        self.isActive = true
+    }
+    
+    func isInactive() {
+        self.isActive = false
     }
 }

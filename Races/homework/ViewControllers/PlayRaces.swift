@@ -22,7 +22,9 @@ class PlayRacesVC: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var road: UIView!
     @IBOutlet weak var roadWidth: NSLayoutConstraint!
-    @IBOutlet weak var brick: UIImageView!
+    @IBOutlet weak var brick: UIImageView! {
+        didSet { brickAnimation() }
+    }
     @IBOutlet weak var car: UIImageView!
     @IBOutlet weak var carCenterX: NSLayoutConstraint!
     
@@ -31,13 +33,11 @@ class PlayRacesVC: UIViewController {
         super.viewDidLoad()
         
         setBrick()
-        brickAnimation()
-        
-        swipeOne.addTarget(self, action: #selector(swipeLeft))
+        swipeOne.addTarget(self, action: #selector (swipeLeft))
         swipeOne.direction = .left
         view.addGestureRecognizer(swipeOne)
         swipeTwo.addTarget(self, action: #selector(swipeRight))
-        swipeTwo.direction = .right
+//        swipeTwo.direction = .right
         view.addGestureRecognizer(swipeTwo)
     }
     
@@ -73,9 +73,9 @@ class PlayRacesVC: UIViewController {
         if let brickTopConstraint = brickTopConstraint,
            let brickCenterXConstraint = brickCenterXConstraint,
            let brickBottomConstraint = brickBottomConstraint {
-            brickTopConstraint.isActive = true
-            brickCenterXConstraint.isActive = true
-            brickBottomConstraint.isActive = false
+            brickTopConstraint.isActive()
+            brickCenterXConstraint.isActive()
+            brickBottomConstraint.isInactive()
         }
     }
     
@@ -95,8 +95,8 @@ class PlayRacesVC: UIViewController {
         sideToChoose = Bool.random()
         guard let brickTopConstraint = brickTopConstraint,
               let brickBottomConstraint = brickBottomConstraint else { return }
-        brickTopConstraint.isActive = false
-        brickBottomConstraint.isActive = true
+        brickTopConstraint.isInactive()
+        brickBottomConstraint.isActive()
         UIView.animate(withDuration: 2.5, delay: 0, options: .repeat) {
             self.road.layoutIfNeeded()
         } completion: { [weak self] _ in

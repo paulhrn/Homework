@@ -39,8 +39,8 @@
                                     <constraint firstAttribute="height" constant="86" id="8Pi-eA-jAf"/>
                                     <constraint firstAttribute="width" constant="224" id="hOm-Cp-FyH"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Play"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Play"/>
                                 <connections>
                                     <action selector="PlayButton:" destination="mpr-lx-7wW" eventType="touchUpInside" id="Shj-ay-2Wg"/>
                                 </connections>
@@ -52,8 +52,8 @@
                                     <constraint firstAttribute="width" constant="224" id="GDC-iF-h3D"/>
                                     <constraint firstAttribute="height" constant="86" id="R7e-PE-nM3"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Scores"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Scores"/>
                                 <connections>
                                     <action selector="ScoresButton:" destination="mpr-lx-7wW" eventType="touchUpInside" id="UeJ-Qp-eLp"/>
                                 </connections>
@@ -65,8 +65,8 @@
                                     <constraint firstAttribute="width" constant="224" id="4aW-fH-Ebc"/>
                                     <constraint firstAttribute="height" constant="86" id="y7e-jc-NDR"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Settings"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Settings"/>
                                 <connections>
                                     <action selector="SettingsButton:" destination="mpr-lx-7wW" eventType="touchUpInside" id="McC-JA-KdJ"/>
                                 </connections>

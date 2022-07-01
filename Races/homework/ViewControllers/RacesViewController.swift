@@ -16,13 +16,25 @@ class RacesVC: UIViewController {
     @IBOutlet weak var Settings: UIButton!
     
     // MARK: - Life Cycle
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let view = view {
+            view.layer.insertSublayer(CALayer(layer: view), at: 0)
+        }
+        view.addGradientLocation(colors: [#colorLiteral(red: 0.7411764706, green: 0.9019607843, blue: 0.9215686275, alpha: 1).cgColor, #colorLiteral(red: 0.6862745098, green: 0.9333333333, blue: 0.9333333333, alpha: 1).cgColor, #colorLiteral(red: 0.4392156863, green: 0.6784313725, blue: 0.6901960784, alpha: 1).cgColor], locations: [0, 0.5, 1])
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         let buttonsOutlets = [Play, Scores, Settings] as! [UIButton]
         buttonsOutlets.forEach{ $0.addCornerRadius() }
-        buttonsOutlets.forEach{ $0.addGradient() }
-        buttonsOutlets.forEach{ $0.setTitleColor(.red, for: .normal) }
+        buttonsOutlets.forEach{ $0.addGradientPoints() }
         buttonsOutlets.forEach{ $0.addShadow() }
+        buttonsOutlets.forEach{ $0.setTitleColor(.white, for: .normal) }
+        if let font = UIFont(name: "Pacifico", size: 25) {
+            buttonsOutlets.forEach{ $0.titleLabel?.addFont(font: font) }
+        }
+        buttonsOutlets.forEach{ $0.titleLabel?.addShadow(shadowColor: .darkGray, offset: .init(width: 10, height: 8), radius: 7, opacity: 1) }
+        buttonsOutlets.forEach{ $0.attrStringUnderline() }
     }
     
     // MARK: - Actions
@@ -54,31 +66,5 @@ class RacesVC: UIViewController {
         let storyboard = UIStoryboard(name: "Settings", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "SettingsRacesV")
         navigationController?.pushViewController(viewController, animated: true)
-    }
-}
-
-//MARK: - Extensions
-extension UIView {
-    func addShadow(shadowColor: UIColor = .red, offset: CGSize = .init(width: 5, height: 5), radius: CGFloat = 10, opacity: Float = 1) {
-        layer.shadowColor = shadowColor.cgColor
-        layer.shadowOffset = offset
-        layer.shadowRadius = radius
-        layer.shadowOpacity = opacity
-    }
-    
-    func addGradient(type: CAGradientLayerType = .axial, colors: [CGColor] = [UIColor.red.cgColor, UIColor.purple.cgColor, UIColor.cyan.cgColor]) {
-        let gradient = CAGradientLayer()
-        gradient.type = type
-        gradient.colors = colors
-//        gradient.locations = locations
-        gradient.startPoint = .init(x: 1, y: 0.9)
-        gradient.endPoint = .init(x: 0, y: 0.2)
-        gradient.frame = layer.bounds
-        gradient.cornerRadius = layer.cornerRadius
-        layer.insertSublayer(gradient, at: 1)
-    }
-    
-    func addCornerRadius() {
-        layer.cornerRadius = layer.frame.height / 2
     }
 }
