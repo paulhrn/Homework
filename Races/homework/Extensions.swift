@@ -16,12 +16,12 @@ extension UIView {
         layer.shadowOpacity = opacity
     }
     
-    func addGradientPoints(type: CAGradientLayerType = .axial, colors: [CGColor] = [UIColor.red.cgColor, UIColor.purple.cgColor, UIColor.cyan.cgColor]) {
+    func addGradientPoints(type: CAGradientLayerType = .axial, colors: [CGColor] = [UIColor.red.cgColor, UIColor.purple.cgColor, UIColor.cyan.cgColor], startPoint: CGPoint = CGPoint(x: 1, y: 0.9), endPoint: CGPoint = CGPoint(x: 0, y: 0.2)) {
         let gradient = CAGradientLayer()
         gradient.type = type
         gradient.colors = colors
-        gradient.startPoint = .init(x: 1, y: 0.9)
-        gradient.endPoint = .init(x: 0, y: 0.2)
+        gradient.startPoint = startPoint
+        gradient.endPoint = endPoint
         gradient.frame = layer.bounds
         gradient.cornerRadius = layer.cornerRadius
         layer.insertSublayer(gradient, at: 1)

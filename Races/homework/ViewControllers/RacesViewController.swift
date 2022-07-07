@@ -23,6 +23,7 @@ class RacesVC: UIViewController {
         }
         view.addGradientLocation(colors: [#colorLiteral(red: 0.7411764706, green: 0.9019607843, blue: 0.9215686275, alpha: 1).cgColor, #colorLiteral(red: 0.6862745098, green: 0.9333333333, blue: 0.9333333333, alpha: 1).cgColor, #colorLiteral(red: 0.4392156863, green: 0.6784313725, blue: 0.6901960784, alpha: 1).cgColor], locations: [0, 0.5, 1])
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let buttonsOutlets = [Play, Scores, Settings] as! [UIButton]

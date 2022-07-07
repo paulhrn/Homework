@@ -37,7 +37,6 @@ class Circle: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
         circle.layer.cornerRadius = circle.frame.height / 2
     }
     
