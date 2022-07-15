@@ -63,3 +63,13 @@ extension NSLayoutConstraint {
         self.isActive = false
     }
 }
+
+extension UIViewController {
+    func addAlert(title: String, message: String, preferredStyle: UIAlertController.Style, actions: [UIAlertAction]) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: preferredStyle)
+        for action in actions {
+            alert.addAction(action)
+        }
+        present(alert, animated: true)
+    }
+}

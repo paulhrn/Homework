@@ -51,11 +51,48 @@ class RacesVC: UIViewController {
         settings()
     }
     
+    @IBAction func changeName(_ sender: Any) {
+        let alert = UIAlertController(title: "Enter your name ;)", message: nil, preferredStyle: .alert)
+        alert.addTextField { (textField1) in
+            textField1.placeholder = "Your name"
+        }
+        let action1 = UIAlertAction(title: "Continue", style: .default) { _ in
+            if let nameText = alert.textFields?[0].text {
+                print("Name: \(nameText)")
+                UserDefaults.standard.set(nameText, forKey: "Name")
+            }
+        }
+        let action2 = UIAlertAction(title: "Cancel", style: .cancel)
+        alert.addAction(action1)
+        alert.addAction(action2)
+        present(alert, animated: true)
+    }
+    
     // MARK: - Private Funcs
     private func play() {
-        let storyboard = UIStoryboard(name: "Play", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "PlayRacesV")
-        navigationController?.pushViewController(viewController, animated: true)
+        let alert = UIAlertController(title: "Enter your name ;)", message: nil, preferredStyle: .alert)
+        alert.addTextField { (textField1) in
+            textField1.placeholder = "Your name"
+        }
+        let action1 = UIAlertAction(title: "Continue", style: .default) { _ in
+            if let nameText = alert.textFields?[0].text {
+                print("Name: \(nameText)")
+                UserDefaults.standard.set(nameText, forKey: "Name")
+                let storyboard = UIStoryboard(name: "Play", bundle: nil)
+                let viewController = storyboard.instantiateViewController(withIdentifier: "PlayRacesV")
+                self.navigationController?.pushViewController(viewController, animated: true)
+            }
+        }
+        let action2 = UIAlertAction(title: "Cancel", style: .cancel)
+        alert.addAction(action1)
+        alert.addAction(action2)
+        if UserDefaults.standard.value(forKey: "Name") as? String == "user" {
+            present(alert, animated: true)
+        } else {
+            let storyboard = UIStoryboard(name: "Play", bundle: nil)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "PlayRacesV")
+            self.navigationController?.pushViewController(viewController, animated: true)
+        }
     }
     
     private func scores() {

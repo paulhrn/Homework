@@ -72,8 +72,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="brick" width="675" height="360"/>
-        <image name="car" width="351" height="690"/>
+        <image name="brick" width="800" height="600"/>
+        <image name="car" width="1656" height="3265"/>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

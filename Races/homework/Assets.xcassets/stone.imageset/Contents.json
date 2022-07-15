@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "brick_PNG3321.png",
+      "filename" : "imgonline-com-ua-Resize-GI5HCr49NJ.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -17,5 +17,8 @@
   "info" : {
     "author" : "xcode",
     "version" : 1
+  },
+  "properties" : {
+    "template-rendering-intent" : "template"
   }
 }

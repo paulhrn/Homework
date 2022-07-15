@@ -1,8 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "png-transparent-yellow-coupe-art-sports-car-lamborghini-gallardo-2012-chevrolet-corvette-zr1-top-view-compact-car-car-mode-of-transport.pdf",
-      "idiom" : "universal"
+      "filename" : "1644510394_25-abrakadabra-fun-p-mashina-bez-fona-vid-sverkhu-49.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {

@@ -84,7 +84,20 @@
                             <constraint firstItem="wSf-K7-H1z" firstAttribute="centerX" secondItem="QMq-bn-bRo" secondAttribute="centerX" id="xmc-H1-6xa"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="N14-eP-LGj"/>
+                    <navigationItem key="navigationItem" id="N14-eP-LGj">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="HoD-pH-FDe">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="SHY-sJ-WJc">
+                                <rect key="frame" x="264.5" y="5" width="129.5" height="34.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemIndigoColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Change name"/>
+                                <connections>
+                                    <action selector="changeName:" destination="mpr-lx-7wW" eventType="touchUpInside" id="alv-yF-aZs"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="Play" destination="wSf-K7-H1z" id="CWV-fL-ypS"/>
                         <outlet property="Scores" destination="oxn-BF-42I" id="0VY-mg-3bc"/>
@@ -99,6 +112,9 @@
     <resources>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

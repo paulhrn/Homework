@@ -12,6 +12,7 @@ class PlayRacesVC: UIViewController {
     
     // MARK: - Private Properties
     private var sideToChoose: Bool = true
+    private var score: Int = 0
     private var brickTopConstraint: NSLayoutConstraint?
     private var brickCenterXConstraint: NSLayoutConstraint?
     private var brickBottomConstraint: NSLayoutConstraint?
@@ -37,8 +38,11 @@ class PlayRacesVC: UIViewController {
         swipeOne.direction = .left
         view.addGestureRecognizer(swipeOne)
         swipeTwo.addTarget(self, action: #selector(swipeRight))
-//        swipeTwo.direction = .right
+        //        swipeTwo.direction = .right
         view.addGestureRecognizer(swipeTwo)
+        
+        forCar()
+        forObstacle()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -80,8 +84,11 @@ class PlayRacesVC: UIViewController {
     }
     
     private func brickAnimation() {
-        mainTimer = Timer.scheduledTimer(withTimeInterval: 2.5, repeats: true) { [weak self] _ in
+        forTimer()
+        mainTimer = Timer.scheduledTimer(withTimeInterval: Settings.set.speed, repeats: true) { [weak self] _ in
             self?.animateConstraints()
+            self?.score += 1
+            UserDefaults.standard.set(self?.score, forKey: "Score")
             Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [weak self] _ in
                 guard let carFrame = self?.car.frame else { return }
                 if self?.brick.layer.presentation()?.frame.intersects(carFrame) == true {
@@ -97,7 +104,7 @@ class PlayRacesVC: UIViewController {
               let brickBottomConstraint = brickBottomConstraint else { return }
         brickTopConstraint.isInactive()
         brickBottomConstraint.isActive()
-        UIView.animate(withDuration: 2.5, delay: 0, options: .repeat) {
+        UIView.animate(withDuration: Settings.set.speed, delay: 0, options: .repeat) {
             self.road.layoutIfNeeded()
         } completion: { [weak self] _ in
             guard let widthConstant = self?.roadWidth.constant else { return }
@@ -106,6 +113,47 @@ class PlayRacesVC: UIViewController {
             } else {
                 self?.brickCenterXConstraint?.constant = widthConstant / 3.5
             }
+        }
+    }
+    
+    private func forCar() {
+        let color = UserDefaults.standard.value(forKey: "CarColor") as? String
+        switch color {
+        case "Yellow":
+            Settings.set.carColor = UIImage(named: "car")!
+        case "White":
+            Settings.set.carColor = UIImage(named: "white car")!
+        default:
+            break
+        }
+        car.image = Settings.set.carColor
+    }
+    
+    private func forObstacle() {
+        let obstacle = UserDefaults.standard.value(forKey: "Obstacle") as? String
+        switch obstacle {
+        case "Brick":
+            Settings.set.obstacle = UIImage(named: "brick")!
+        case "Stone":
+            Settings.set.obstacle = UIImage(named: "stone")!
+            brick.tintColor = .red
+        default:
+            break
+        }
+        brick.image = Settings.set.obstacle
+    }
+    
+    private func forTimer() {
+        let timer = UserDefaults.standard.value(forKey: "Speed") as? String
+        switch timer {
+        case "3.0":
+            Settings.set.speed = 3.0
+        case "2.5":
+            Settings.set.speed = 2.5
+        case "2.0":
+            Settings.set.speed = 2.0
+        default:
+            break
         }
     }
 }
