@@ -26,7 +26,7 @@ class RacesVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let buttonsOutlets = [Play, Scores, Settings] as! [UIButton]
+        guard let buttonsOutlets = [Play, Scores, Settings] as? [UIButton] else { return }
         buttonsOutlets.forEach{ $0.addCornerRadius() }
         buttonsOutlets.forEach{ $0.addGradientPoints() }
         buttonsOutlets.forEach{ $0.addShadow() }

@@ -19,6 +19,7 @@ class PlayRacesVC: UIViewController {
     private var mainTimer: Timer?
     private var swipeOne = UISwipeGestureRecognizer()
     private var swipeTwo = UISwipeGestureRecognizer()
+    var selectedSetting: enumSettings?
     
     // MARK: - Outlets
     @IBOutlet weak var road: UIView!
@@ -117,11 +118,15 @@ class PlayRacesVC: UIViewController {
     }
     
     private func forCar() {
-        let color = UserDefaults.standard.value(forKey: "CarColor") as? String
-        switch color {
-        case "Yellow":
+        if UserDefaults.standard.value(forKey: "CarColor") as? String == enumSettings.yellow.rawValue {
+            selectedSetting = .yellow
+        } else if UserDefaults.standard.value(forKey: "CarColor") as? String == enumSettings.white.rawValue {
+            selectedSetting = .white
+        }
+        switch selectedSetting {
+        case .yellow:
             Settings.set.carColor = UIImage(named: "car")!
-        case "White":
+        case .white:
             Settings.set.carColor = UIImage(named: "white car")!
         default:
             break
@@ -130,11 +135,15 @@ class PlayRacesVC: UIViewController {
     }
     
     private func forObstacle() {
-        let obstacle = UserDefaults.standard.value(forKey: "Obstacle") as? String
-        switch obstacle {
-        case "Brick":
+        if UserDefaults.standard.value(forKey: "Obstacle") as? String == enumSettings.brick.rawValue {
+            selectedSetting = .brick
+        } else if UserDefaults.standard.value(forKey: "Obstacle") as? String == enumSettings.stone.rawValue {
+            selectedSetting = .stone
+        }
+        switch  selectedSetting {
+        case .brick:
             Settings.set.obstacle = UIImage(named: "brick")!
-        case "Stone":
+        case .stone:
             Settings.set.obstacle = UIImage(named: "stone")!
             brick.tintColor = .red
         default:
@@ -144,13 +153,19 @@ class PlayRacesVC: UIViewController {
     }
     
     private func forTimer() {
-        let timer = UserDefaults.standard.value(forKey: "Speed") as? String
-        switch timer {
-        case "3.0":
+        if UserDefaults.standard.value(forKey: "Speed") as? String == enumSettings.three.rawValue {
+            selectedSetting = .three
+        } else if UserDefaults.standard.value(forKey: "Speed") as? String == enumSettings.twoFive.rawValue {
+            selectedSetting = .twoFive
+        }  else if UserDefaults.standard.value(forKey: "Speed") as? String == enumSettings.two.rawValue {
+            selectedSetting = .two
+        }
+        switch selectedSetting {
+        case .three:
             Settings.set.speed = 3.0
-        case "2.5":
+        case .twoFive:
             Settings.set.speed = 2.5
-        case "2.0":
+        case .two:
             Settings.set.speed = 2.0
         default:
             break

@@ -20,6 +20,7 @@ class ManageScores {
     }
 }
 
+// MARK: - VC class
 class ScoresRacesVC: UIViewController {
     
     // MARK: - Outlets

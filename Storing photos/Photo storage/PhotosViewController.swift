@@ -13,7 +13,7 @@ class Images: UIViewController {
     // MARK: - Private Properties
     private let fileManager = FileManager.default
     private var imagePath: URL?
-    private var pix: [UIImage] = []
+    private var pix = [UIImage]()
     private let key = "Index"
     private var index = 0
     
@@ -26,7 +26,7 @@ class Images: UIViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        let labels = [showLabel, deleteLabel, uploadLabel] as! [UIButton]
+        guard let labels = [showLabel, deleteLabel, uploadLabel] as? [UIButton] else { return }
         labels.forEach{ $0.layer.cornerRadius = $0.frame.height / 2 }
         
         managerSetup()
@@ -114,6 +114,7 @@ extension Images: UIImagePickerControllerDelegate, UINavigationControllerDelegat
                   let imagePath = imagePath?.appendingPathComponent("pic\(index).jpeg") else { return }
             fileManager.createFile(atPath: imagePath.path, contents: data)
             imageView.image = image
+            pix.append(image)
         }
         picker.dismiss(animated: true)
     }

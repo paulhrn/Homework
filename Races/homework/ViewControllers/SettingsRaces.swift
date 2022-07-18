@@ -23,6 +23,7 @@ class Settings {
     }
 }
 
+// MARK: - VC class
 class SettingsRacesVC: UIViewController {
     
     // MARK: - Outlets
@@ -33,17 +34,17 @@ class SettingsRacesVC: UIViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        let outlets = [carColor, obstacle, speed] as! [UIButton]
+        guard let outlets = [carColor, obstacle, speed] as? [UIButton] else { return }
         outlets.forEach{ $0.addCornerRadius() }
     }
     
     // MARK: - Actions
     @IBAction func carColorAction(_ sender: Any) {
         let action1 = UIAlertAction(title: "White", style: .default) { action in
-            self.forSave(value: "White", key: "CarColor")
+            self.forSave(value: enumSettings.white.rawValue, key: "CarColor")
         }
         let action2 = UIAlertAction(title: "Default", style: .default) { action in
-            self.forSave(value: "Yellow", key: "CarColor")
+            self.forSave(value: enumSettings.yellow.rawValue, key: "CarColor")
         }
         let action3 = UIAlertAction(title: "Back", style: .cancel)
         self.addAlert(title: "", message: "Choose color:", preferredStyle: .actionSheet, actions: [action1, action2, action3])
@@ -52,10 +53,10 @@ class SettingsRacesVC: UIViewController {
     @IBAction func obstacleAction(_ sender: Any) {
         
         let action1 = UIAlertAction(title: "Heart", style: .default) { action in
-            self.forSave(value: "Stone", key: "Obstacle")
+            self.forSave(value: enumSettings.stone.rawValue, key: "Obstacle")
         }
         let action2 = UIAlertAction(title: "Default", style: .default) { action in
-            self.forSave(value: "Brick", key: "Obstacle")
+            self.forSave(value: enumSettings.brick.rawValue, key: "Obstacle")
         }
         let action3 = UIAlertAction(title: "Back", style: .cancel)
         self.addAlert(title: "", message: "Choose obstacle:", preferredStyle: .actionSheet, actions: [action1, action2, action3])
@@ -63,13 +64,13 @@ class SettingsRacesVC: UIViewController {
     
     @IBAction func speedAction(_ sender: Any) {
         let action1 = UIAlertAction(title: "Faster", style: .default) { action in
-            self.forSave(value: "2.0", key: "Speed")
+            self.forSave(value: enumSettings.two.rawValue, key: "Speed")
         }
         let action2 = UIAlertAction(title: "Slower", style: .default) { action in
-            self.forSave(value: "3.0", key: "Speed")
+            self.forSave(value: enumSettings.three.rawValue, key: "Speed")
         }
         let action3 = UIAlertAction(title: "Default", style: .default) { action in
-            self.forSave(value: "2.5", key: "Speed")
+            self.forSave(value: enumSettings.twoFive.rawValue, key: "Speed")
         }
         let action4 = UIAlertAction(title: "Back", style: .cancel)
         self.addAlert(title: "", message: "Choose speed:", preferredStyle: .actionSheet, actions: [action1, action2, action3, action4])
