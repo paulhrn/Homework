@@ -58,6 +58,7 @@ class PlayRacesVC: UIViewController {
         carCenterX.constant -= 25
         if carCenterX.constant <= -roadWidth.constant / 3 {
             self.navigationController?.popToRootViewController(animated: true)
+            UserDefaults.standard.set(Date(), forKey: "Date")
         }
     }
     
@@ -66,6 +67,7 @@ class PlayRacesVC: UIViewController {
         carCenterX.constant += 25
         if carCenterX.constant >= roadWidth.constant / 3 {
             self.navigationController?.popToRootViewController(animated: true)
+            UserDefaults.standard.set(Date(), forKey: "Date")
         }
     }
     
@@ -94,6 +96,7 @@ class PlayRacesVC: UIViewController {
                 guard let carFrame = self?.car.frame else { return }
                 if self?.brick.layer.presentation()?.frame.intersects(carFrame) == true {
                     self?.navigationController?.popToRootViewController(animated: true)
+                    UserDefaults.standard.set(Date(), forKey: "Date")
                 }
             }
         }

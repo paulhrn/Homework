@@ -31,20 +31,43 @@
                                 <color key="textColor" systemColor="systemIndigoColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="k0d-NM-vF8">
+                                <rect key="frame" x="53.5" y="526" width="307" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSd-0I-mC7">
+                                        <rect key="frame" x="0.0" y="0.0" width="107" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="107" id="Lh4-wV-w8N"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="XI8-Qn-yRJ">
+                                        <rect key="frame" x="117" y="0.0" width="190" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="190" id="PRi-sb-d2b"/>
+                                        </constraints>
+                                    </datePicker>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mKe-hb-icb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Qe0-60-CFd" firstAttribute="top" secondItem="mKe-hb-icb" secondAttribute="top" constant="200" id="NIN-lw-FHe"/>
                             <constraint firstItem="mKe-hb-icb" firstAttribute="trailing" secondItem="naD-qh-bzD" secondAttribute="trailing" constant="75" id="P6G-vm-qlf"/>
+                            <constraint firstItem="k0d-NM-vF8" firstAttribute="centerX" secondItem="mKe-hb-icb" secondAttribute="centerX" id="Qzq-eg-VSz"/>
                             <constraint firstItem="naD-qh-bzD" firstAttribute="leading" secondItem="mKe-hb-icb" secondAttribute="leading" constant="75" id="SsW-nd-T3E"/>
                             <constraint firstItem="mKe-hb-icb" firstAttribute="trailing" secondItem="Qe0-60-CFd" secondAttribute="trailing" constant="20" id="bko-X4-GmH"/>
                             <constraint firstItem="Qe0-60-CFd" firstAttribute="leading" secondItem="mKe-hb-icb" secondAttribute="leading" constant="20" id="bnI-uY-tJ0"/>
+                            <constraint firstItem="k0d-NM-vF8" firstAttribute="top" secondItem="naD-qh-bzD" secondAttribute="bottom" constant="8" symbolic="YES" id="cGn-oC-NZI"/>
                             <constraint firstItem="mKe-hb-icb" firstAttribute="bottom" secondItem="naD-qh-bzD" secondAttribute="bottom" constant="344" id="ehM-18-iKi"/>
                             <constraint firstItem="naD-qh-bzD" firstAttribute="top" secondItem="Qe0-60-CFd" secondAttribute="bottom" constant="2" id="t7B-Kq-1tp"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="datePicker" destination="XI8-Qn-yRJ" id="Lvo-yE-hcU"/>
                         <outlet property="userName" destination="Qe0-60-CFd" id="uSU-s0-Cyq"/>
                         <outlet property="userScore" destination="naD-qh-bzD" id="bur-Ig-Jge"/>
                     </connections>

@@ -26,6 +26,7 @@ class ScoresRacesVC: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userScore: UILabel!
+    @IBOutlet weak var datePicker: UIDatePicker!
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -34,6 +35,7 @@ class ScoresRacesVC: UIViewController {
         view.backgroundColor = .systemYellow
         name()
         score()
+        datePicker.date = UserDefaults.standard.value(forKey: "Date") as! Date
     }
     
     // MARK: - Private Funcs
