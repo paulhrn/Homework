@@ -23,19 +23,24 @@ class ManageScores {
 // MARK: - VC class
 class ScoresRacesVC: UIViewController {
     
+    // MARK: - Properties
+    private var date = UserDefaults.standard.value(forKey: "Date") as! Date
+    
     // MARK: - Outlets
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userScore: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .systemYellow
+        datePicker.date = date
         name()
         score()
-        datePicker.date = UserDefaults.standard.value(forKey: "Date") as! Date
+        setupTableView()
     }
     
     // MARK: - Private Funcs
@@ -56,5 +61,28 @@ class ScoresRacesVC: UIViewController {
             ManageScores.set.score = score - 1
         }
         userScore.text = "Current score is: \(ManageScores.set.score)"
+    }
+    
+    private func setupTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.separatorColor = .systemRed
+    }
+}
+
+extension ScoresRacesVC: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return PlayRacesVC.dictionary.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "M/d/yy, h:mm a"
+        dateFormatter.locale = Locale(identifier: "en_us")
+        let dateString = dateFormatter.string(from: date)
+        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
+        cell.textLabel?.text = "\(Array(PlayRacesVC.dictionary.keys)[indexPath.row])'s score: \(Array(PlayRacesVC.dictionary.values)[indexPath.row]), \(dateString)"
+        cell.backgroundColor = .systemYellow
+        return cell
     }
 }

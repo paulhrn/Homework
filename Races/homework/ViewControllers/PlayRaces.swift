@@ -10,6 +10,8 @@ import UIKit
 
 class PlayRacesVC: UIViewController {
     
+    static var dictionary = UserDefaults.standard.object(forKey: "Dict") as? [String: Int] ?? [:]
+    
     // MARK: - Private Properties
     private var sideToChoose: Bool = true
     private var score: Int = 0
@@ -50,6 +52,7 @@ class PlayRacesVC: UIViewController {
         super.viewWillDisappear(animated)
         guard let mainTimer = mainTimer else { return }
         mainTimer.invalidate()
+        forTableView()
     }
     
     //MARK: - Actions
@@ -59,6 +62,7 @@ class PlayRacesVC: UIViewController {
         if carCenterX.constant <= -roadWidth.constant / 3 {
             self.navigationController?.popToRootViewController(animated: true)
             UserDefaults.standard.set(Date(), forKey: "Date")
+            forTableView()
         }
     }
     
@@ -68,6 +72,7 @@ class PlayRacesVC: UIViewController {
         if carCenterX.constant >= roadWidth.constant / 3 {
             self.navigationController?.popToRootViewController(animated: true)
             UserDefaults.standard.set(Date(), forKey: "Date")
+            forTableView()
         }
     }
     
@@ -172,6 +177,14 @@ class PlayRacesVC: UIViewController {
             Settings.set.speed = 2.0
         default:
             break
+        }
+    }
+    
+    private func forTableView() {
+        PlayRacesVC.dictionary[UserDefaults.standard.value(forKey: "Name") as! String] = UserDefaults.standard.value(forKey: "Score") as! Int - 1
+        UserDefaults.standard.set(PlayRacesVC.dictionary, forKey: "Dict")
+        if PlayRacesVC.dictionary.count > 5 {
+            PlayRacesVC.dictionary.removeAll()
         }
     }
 }
