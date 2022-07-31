@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="56" id="Mia-sd-62B" customClass="CustomCell" customModule="_7_07" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="427" height="56"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mia-sd-62B" id="z7f-VU-Nyf">
+                <rect key="frame" x="0.0" y="0.0" width="427" height="56"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n76-gI-OLj">
+                        <rect key="frame" x="10" y="15.5" width="49.5" height="25.5"/>
+                        <fontDescription key="fontDescription" type="italicSystem" pointSize="21"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17P-Sl-wOl">
+                        <rect key="frame" x="245" y="12.5" width="175" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="175" id="gUS-7U-c5z"/>
+                        </constraints>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Tap me!"/>
+                        <connections>
+                            <action selector="myButtonTap:" destination="Mia-sd-62B" eventType="touchUpInside" id="w5l-w3-dJn"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="n76-gI-OLj" firstAttribute="leading" secondItem="z7f-VU-Nyf" secondAttribute="leading" constant="10" id="108-sE-lG6"/>
+                    <constraint firstItem="n76-gI-OLj" firstAttribute="centerY" secondItem="z7f-VU-Nyf" secondAttribute="centerY" id="Ooi-I6-uUu"/>
+                    <constraint firstItem="17P-Sl-wOl" firstAttribute="centerY" secondItem="z7f-VU-Nyf" secondAttribute="centerY" id="h5m-qb-dmi"/>
+                    <constraint firstAttribute="trailing" secondItem="17P-Sl-wOl" secondAttribute="trailing" constant="7" id="k3d-ag-l73"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="myButton" destination="17P-Sl-wOl" id="26m-BX-W9D"/>
+                <outlet property="myLabel" destination="n76-gI-OLj" id="SHg-i2-lIR"/>
+            </connections>
+            <point key="canvasLocation" x="202.17391304347828" y="140.625"/>
+        </tableViewCell>
+    </objects>
+</document>
