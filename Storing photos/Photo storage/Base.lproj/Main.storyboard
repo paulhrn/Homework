@@ -106,12 +106,6 @@
                                     <action selector="uploadAction:" destination="Mok-YA-gFj" eventType="touchUpInside" id="UNK-mA-Hqh"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xU3-1n-AzT">
-                                <rect key="frame" x="20" y="88" width="374" height="426"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="374" id="a3R-a1-gDf"/>
-                                </constraints>
-                            </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="opI-ZT-cJM">
                                 <rect key="frame" x="20" y="532" width="380" height="176"/>
                                 <subviews>
@@ -123,7 +117,6 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="LPE-81-PTh"/>
-                                                    <constraint firstAttribute="width" constant="177" id="cPE-K4-NL4"/>
                                                 </constraints>
                                                 <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
@@ -135,9 +128,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmj-9A-M70">
                                                 <rect key="frame" x="197" y="0.0" width="177" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="177" id="cYR-ij-827"/>
-                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="💬"/>
                                                 <connections>
@@ -168,32 +158,44 @@
                                     <constraint firstAttribute="trailing" secondItem="ZeT-Pn-52h" secondAttribute="trailing" constant="6" id="qhy-hd-Fdm"/>
                                 </constraints>
                             </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aDb-c4-by7">
+                                <rect key="frame" x="20" y="88" width="374" height="427"/>
+                                <color key="backgroundColor" red="0.9703757167" green="0.88839203119999999" blue="0.96673327679999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xse-SN-tMO">
+                                    <size key="itemSize" width="64" height="64"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fpF-ve-eYL"/>
                         <color key="backgroundColor" red="0.96734303219999995" green="0.89138883899999999" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="fpF-ve-eYL" firstAttribute="trailing" secondItem="aDb-c4-by7" secondAttribute="trailing" constant="20" id="1DA-WQ-rSQ"/>
                             <constraint firstItem="fpF-ve-eYL" firstAttribute="bottom" secondItem="UkC-Vb-ICA" secondAttribute="bottom" constant="50" id="2Nw-yZ-s21"/>
-                            <constraint firstItem="xU3-1n-AzT" firstAttribute="top" secondItem="fpF-ve-eYL" secondAttribute="top" id="4T1-f7-dib"/>
                             <constraint firstItem="fpF-ve-eYL" firstAttribute="trailing" secondItem="DGZ-6t-9cc" secondAttribute="trailing" constant="20" id="D8u-Ld-KWL"/>
-                            <constraint firstItem="xU3-1n-AzT" firstAttribute="leading" secondItem="fpF-ve-eYL" secondAttribute="leading" constant="20" id="DOv-5U-Pxi"/>
                             <constraint firstItem="fpF-ve-eYL" firstAttribute="trailing" secondItem="UkC-Vb-ICA" secondAttribute="trailing" constant="20" id="I75-hb-RgO"/>
+                            <constraint firstItem="aDb-c4-by7" firstAttribute="top" secondItem="fpF-ve-eYL" secondAttribute="top" id="Oy7-hX-VJT"/>
                             <constraint firstItem="UkC-Vb-ICA" firstAttribute="top" secondItem="DGZ-6t-9cc" secondAttribute="bottom" constant="25" id="Plu-Om-Ccj"/>
+                            <constraint firstItem="aDb-c4-by7" firstAttribute="leading" secondItem="fpF-ve-eYL" secondAttribute="leading" constant="20" id="Wj9-F9-NyP"/>
                             <constraint firstItem="fpF-ve-eYL" firstAttribute="bottom" secondItem="opI-ZT-cJM" secondAttribute="bottom" constant="154" id="cTF-mG-KOy"/>
                             <constraint firstItem="DGZ-6t-9cc" firstAttribute="leading" secondItem="fpF-ve-eYL" secondAttribute="leading" constant="20" id="dV9-H2-1Pz"/>
                             <constraint firstItem="UkC-Vb-ICA" firstAttribute="leading" secondItem="fpF-ve-eYL" secondAttribute="leading" constant="20" id="fmv-Wq-3Fo"/>
+                            <constraint firstItem="opI-ZT-cJM" firstAttribute="top" secondItem="aDb-c4-by7" secondAttribute="bottom" constant="17" id="lWx-ux-FGK"/>
                             <constraint firstItem="fpF-ve-eYL" firstAttribute="trailing" secondItem="opI-ZT-cJM" secondAttribute="trailing" constant="14" id="uea-iq-vSR"/>
-                            <constraint firstItem="fpF-ve-eYL" firstAttribute="trailing" secondItem="xU3-1n-AzT" secondAttribute="trailing" constant="20" id="vQ9-a5-McP"/>
                             <constraint firstItem="opI-ZT-cJM" firstAttribute="leading" secondItem="fpF-ve-eYL" secondAttribute="leading" constant="20" id="vxw-0j-7ah"/>
-                            <constraint firstItem="fpF-ve-eYL" firstAttribute="bottom" secondItem="xU3-1n-AzT" secondAttribute="bottom" constant="348" id="xrc-t9-aDj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2ze-qd-m7t"/>
                     <connections>
+                        <outlet property="collectionView" destination="aDb-c4-by7" id="Q07-VA-RWQ"/>
                         <outlet property="commentLabel" destination="mmj-9A-M70" id="dRx-Cz-cR7"/>
                         <outlet property="deleteLabel" destination="pK7-SA-fYR" id="KV5-8M-g7f"/>
                         <outlet property="interactionsBottomConstraint" destination="cTF-mG-KOy" id="Fjg-63-oN9"/>
+                        <outlet property="interactionsTopConstraint" destination="lWx-ux-FGK" id="One-0s-s5A"/>
                         <outlet property="likeLabel" destination="jzi-mA-U7i" id="j7X-6r-nik"/>
-                        <outlet property="scrollView" destination="xU3-1n-AzT" id="w4b-FN-fPg"/>
                         <outlet property="showLabel" destination="sjt-jH-Jar" id="ltI-Qq-hpy"/>
                         <outlet property="stackShowDelete" destination="DGZ-6t-9cc" id="pLy-iU-chj"/>
                         <outlet property="textView" destination="YQP-vl-NuP" id="L0P-EP-aUm"/>

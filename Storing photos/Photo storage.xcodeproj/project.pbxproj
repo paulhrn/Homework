@@ -7,29 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EFB9A2E228985DAB00831F1C /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFB9A2E128985DAB00831F1C /* CustomCell.xib */; };
+		EFB9A2E428985DB600831F1C /* CustomCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB9A2E328985DB600831F1C /* CustomCollectionCell.swift */; };
+		EFEC92AA2899313A00308380 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEC92A92899313A00308380 /* Extensions.swift */; };
 		FAF188E828808B8D00BCB3FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF188E728808B8D00BCB3FA /* AppDelegate.swift */; };
 		FAF188EA28808B8D00BCB3FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF188E928808B8D00BCB3FA /* SceneDelegate.swift */; };
-		FAF188EC28808B8D00BCB3FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF188EB28808B8D00BCB3FA /* ViewController.swift */; };
+		FAF188EC28808B8D00BCB3FA /* UnlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF188EB28808B8D00BCB3FA /* UnlockViewController.swift */; };
 		FAF188EF28808B8D00BCB3FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF188ED28808B8D00BCB3FA /* Main.storyboard */; };
 		FAF188F128808B8F00BCB3FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF188F028808B8F00BCB3FA /* Assets.xcassets */; };
 		FAF188F428808B8F00BCB3FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF188F228808B8F00BCB3FA /* LaunchScreen.storyboard */; };
 		FAF188FC28808BE800BCB3FA /* EnterPassword.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF188FB28808BE800BCB3FA /* EnterPassword.xib */; };
 		FAF189082880949C00BCB3FA /* ForEnterPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF189072880949C00BCB3FA /* ForEnterPassword.swift */; };
-		FAF1890A2880993B00BCB3FA /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF189092880993B00BCB3FA /* PhotosViewController.swift */; };
+		FAF1890A2880993B00BCB3FA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF189092880993B00BCB3FA /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EFB9A2E128985DAB00831F1C /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		EFB9A2E328985DB600831F1C /* CustomCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionCell.swift; sourceTree = "<group>"; };
+		EFEC92A92899313A00308380 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FAF188E428808B8D00BCB3FA /* Photo storage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Photo storage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF188E728808B8D00BCB3FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAF188E928808B8D00BCB3FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FAF188EB28808B8D00BCB3FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FAF188EB28808B8D00BCB3FA /* UnlockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockViewController.swift; sourceTree = "<group>"; };
 		FAF188EE28808B8D00BCB3FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAF188F028808B8F00BCB3FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAF188F328808B8F00BCB3FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAF188F528808B8F00BCB3FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAF188FB28808BE800BCB3FA /* EnterPassword.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EnterPassword.xib; sourceTree = "<group>"; };
 		FAF189072880949C00BCB3FA /* ForEnterPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForEnterPassword.swift; sourceTree = "<group>"; };
-		FAF189092880993B00BCB3FA /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		FAF189092880993B00BCB3FA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EFB9A2E528985DD200831F1C /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				EFB9A2E128985DAB00831F1C /* CustomCell.xib */,
+				EFB9A2E328985DB600831F1C /* CustomCollectionCell.swift */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
 		FAF188DB28808B8D00BCB3FA = {
 			isa = PBXGroup;
 			children = (
@@ -65,8 +80,10 @@
 				FAF188E728808B8D00BCB3FA /* AppDelegate.swift */,
 				FAF188E928808B8D00BCB3FA /* SceneDelegate.swift */,
 				FAF1890428808E4B00BCB3FA /* CustomView */,
-				FAF188EB28808B8D00BCB3FA /* ViewController.swift */,
-				FAF189092880993B00BCB3FA /* PhotosViewController.swift */,
+				EFB9A2E528985DD200831F1C /* CustomCell */,
+				FAF188EB28808B8D00BCB3FA /* UnlockViewController.swift */,
+				FAF189092880993B00BCB3FA /* MainViewController.swift */,
+				EFEC92A92899313A00308380 /* Extensions.swift */,
 				FAF188ED28808B8D00BCB3FA /* Main.storyboard */,
 				FAF188F028808B8F00BCB3FA /* Assets.xcassets */,
 				FAF188F228808B8F00BCB3FA /* LaunchScreen.storyboard */,
@@ -142,6 +159,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFB9A2E228985DAB00831F1C /* CustomCell.xib in Resources */,
 				FAF188F428808B8F00BCB3FA /* LaunchScreen.storyboard in Resources */,
 				FAF188F128808B8F00BCB3FA /* Assets.xcassets in Resources */,
 				FAF188EF28808B8D00BCB3FA /* Main.storyboard in Resources */,
@@ -156,11 +174,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAF188EC28808B8D00BCB3FA /* ViewController.swift in Sources */,
+				FAF188EC28808B8D00BCB3FA /* UnlockViewController.swift in Sources */,
 				FAF189082880949C00BCB3FA /* ForEnterPassword.swift in Sources */,
+				EFB9A2E428985DB600831F1C /* CustomCollectionCell.swift in Sources */,
 				FAF188E828808B8D00BCB3FA /* AppDelegate.swift in Sources */,
-				FAF1890A2880993B00BCB3FA /* PhotosViewController.swift in Sources */,
+				FAF1890A2880993B00BCB3FA /* MainViewController.swift in Sources */,
 				FAF188EA28808B8D00BCB3FA /* SceneDelegate.swift in Sources */,
+				EFEC92AA2899313A00308380 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

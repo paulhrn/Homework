@@ -14,7 +14,11 @@ class Images: UIViewController {
     private let fileManager = FileManager.default
     private var imagePath: URL?
     private let notificationCenter = NotificationCenter.default
-    private lazy var pix: [UIImageView] = []
+    private lazy var pix: [UIImage] = [] {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
     private let key = "Index"
     private let commentString = "Add a comment or tap 💬 to hide..."
     private var index = 0
@@ -27,12 +31,13 @@ class Images: UIViewController {
     @IBOutlet weak var deleteLabel: UIButton!
     @IBOutlet weak var stackShowDelete: UIStackView!
     @IBOutlet weak var uploadLabel: UIButton!
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var likeLabel: UIButton!
     @IBOutlet weak var commentLabel: UIButton!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var viewInteractions: UIView!
     @IBOutlet weak var interactionsBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var interactionsTopConstraint: NSLayoutConstraint!
     
     // MARK: - Life Cycle
     override func viewWillAppear(_ animated: Bool) {
@@ -43,15 +48,17 @@ class Images: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        pix = [createImageView(UIImage(named: "Image")!), createImageView(UIImage(named: "Image")!)]
+        if let image = UIImage(named: "Image") {
+            pix.append(image)
+        }
         view.bringSubviewToFront(stackShowDelete)
         guard let labels = [showLabel, deleteLabel, uploadLabel, likeLabel, commentLabel] as? [UIButton] else { return }
         labels.forEach{ $0.layer.cornerRadius = $0.frame.height / 2 }
         managerSetup()
         textView.layer.cornerRadius = 20
-        index = UserDefaults.standard.value(forKey: key) as! Int
-        scrollViewImages()
+        index = UserDefaults.standard.value(forKey: key) as? Int ?? 0
         keyboardAnimation()
+        setupCollectionView()
     }
     
     // MARK: - Actions
@@ -79,9 +86,10 @@ class Images: UIViewController {
         if textView.isHidden == true {
             textView.isHidden = false
             view.addBlur(style: .regular)
-            view.bringSubviewToFront(scrollView)
+            view.bringSubviewToFront(collectionView)
             view.bringSubviewToFront(viewInteractions)
         } else if textView.isHidden == false {
+            viewInteractions.backgroundColor = .clear
             textView.isHidden = true
             view.removeBlur()
             view.bringSubviewToFront(stackShowDelete)
@@ -91,6 +99,13 @@ class Images: UIViewController {
     }
     
     // MARK: - Private Funcs
+    private func setupCollectionView() {
+        collectionView.register(UINib(nibName: "CustomCell", bundle: nil), forCellWithReuseIdentifier: "CustomCell")
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.showsVerticalScrollIndicator = false
+    }
+    
     private func managerSetup() {
         let documentPath = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first
         guard let imagesDirectory = documentPath?.appendingPathComponent("Images") else { return }
@@ -105,21 +120,33 @@ class Images: UIViewController {
     }
     
     private func show() {
-        do {
-            let alert = UIAlertController(title: "Pictures' names:", message: "\(try fileManager.contentsOfDirectory(atPath: imagePath!.path).joined(separator: ", "))", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .cancel) { [weak self] _ in
-                self?.view.removeBlur()
+        if let pixFirst = try? (fileManager.contentsOfDirectory(atPath: imagePath!.path).first as? NSString)?.deletingPathExtension {
+            do {
+                
+                let alert = UIAlertController(title: "Last added picture:", message: "\(pixFirst)", preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK", style: .cancel) { [weak self] _ in
+                    self?.view.removeBlur()
+                }
+                alert.addAction(action)
+                present(alert, animated: true)
+                if let contentsOfDirectory = try? fileManager.contentsOfDirectory(atPath: imagePath!.path) {
+                    print(contentsOfDirectory)
+                }
             }
-            alert.addAction(action)
-            present(alert, animated: true)
-            print(try fileManager.contentsOfDirectory(atPath: imagePath!.path))
-        } catch {
-            print("caught")
+        } else {
+            do {
+                let alert = UIAlertController(title: "No pictures", message: "Tap \"OK\" and upload pictures", preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK", style: .cancel) { [weak self] _ in
+                    self?.view.removeBlur()
+                }
+                alert.addAction(action)
+                present(alert, animated: true)
+            }
         }
     }
     
     private func delete() {
-        let alert = UIAlertController(title: "Delete picture:", message: "Enter file name omitting .format", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Delete last added picture:", message: "Enter last picture's name as it was shown", preferredStyle: .alert)
         alert.addTextField { textField in
             textField.placeholder = "File name"
         }
@@ -132,6 +159,9 @@ class Images: UIViewController {
             if let imagePath = self?.imagePath?.appendingPathComponent("\(imageName).jpeg") {
                 do {
                     try self?.fileManager.removeItem(at: imagePath)
+                    if self?.pix.isEmpty == false {
+                        self?.pix.removeLast()
+                    }
                 } catch {
                     print("caught")
                 }
@@ -165,40 +195,18 @@ class Images: UIViewController {
                     UIView.animate(withDuration: 5.0) {
                         self.view.layoutIfNeeded()
                     }
+                    self.interactionsTopConstraint.constant = -(keyboardSize.height)
                 }
             }
         }
         let hideNotification = UIResponder.keyboardWillHideNotification
         notificationCenter.addObserver(forName: hideNotification, object: nil, queue: .main) { _ in
-            self.interactionsBottomConstraint.constant = 154
+            self.interactionsBottomConstraint.constant = 154 //initial
             UIView.animate(withDuration: 5.0) {
                 self.view.layoutIfNeeded()
             }
+            self.interactionsTopConstraint.constant = 17 //initial
         }
-    }
-    
-    private func scrollViewImages() {
-        pix.enumerated().forEach{ index, item in
-            NSLayoutConstraint.activate([
-                pix[index].heightAnchor.constraint(equalTo: scrollView.heightAnchor),
-                pix[index].widthAnchor.constraint(equalTo: scrollView.widthAnchor),
-                pix[0].topAnchor.constraint(equalTo: scrollView.topAnchor),
-                pix[index].leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
-            ])
-            if index != 0 {
-                pix[index].topAnchor.constraint(equalTo: pix[index - 1].bottomAnchor).isActive = true
-            }
-            scrollView.contentSize = CGSize(width: scrollView.frame.width, height: (view.frame.height * CGFloat(index + 1)))
-        }
-    }
-    
-    private func createImageView(_ image: UIImage) -> UIImageView {
-        let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.addSubview(imageView)
-        imageView.image = image
-        imageView.contentMode = .scaleAspectFill
-        return imageView
     }
 }
 
@@ -209,11 +217,21 @@ extension Images: UIImagePickerControllerDelegate, UINavigationControllerDelegat
             guard let data = image.jpegData(compressionQuality: 5),
                   let imagePath = imagePath?.appendingPathComponent("pic\(index).jpeg") else { return }
             fileManager.createFile(atPath: imagePath.path, contents: data)
-//            var n = 0
-//            pix.insert(createImageView(image), at: 0)
-//            n += 1
+            pix.append(image)
         }
         picker.dismiss(animated: true)
+    }
+}
+
+extension Images: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return pix.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCell", for: indexPath) as? CustomCollectionCell else { return UICollectionViewCell() }
+        cell.setImageView(with: pix[indexPath.row])
+        return cell
     }
 }
 
@@ -229,24 +247,6 @@ extension Images: UITextViewDelegate {
         if textView.text.isEmpty {
             textView.text = commentString
             textView.textColor = UIColor.lightGray
-        }
-    }
-}
-
-extension UIView {
-    func addBlur(style: UIBlurEffect.Style) {
-        var blurEffectView = UIVisualEffectView()
-        let blurEffect = UIBlurEffect(style: style)
-        blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = bounds
-        addSubview(blurEffectView)
-    }
-    
-    func removeBlur() {
-        for view in self.subviews {
-            if let view = view as? UIVisualEffectView {
-                view.removeFromSuperview()
-            }
         }
     }
 }
