@@ -41,15 +41,15 @@ class ViewController: UIViewController, ColorDelegate {
     }
     
     private func setupNib() {
-        let cell = UINib(nibName: "CustomCelll", bundle: nil)
-        tableView.register(cell, forCellReuseIdentifier: "CustomCelll")
+        let cell = UINib(nibName: CustomCell.xib, bundle: nil)
+        tableView.register(cell, forCellReuseIdentifier: CustomCell.reuseIdentifier)
     }
 }
 
 // MARK: - Extensions
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCelll", for: indexPath) as? CustomCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CustomCell.reuseIdentifier, for: indexPath) as? CustomCell else { return UITableViewCell() }
         cell.selectionStyle = .none
         cell.setLabel(with: "\(names[indexPath.row % names.count])")
         cell.myButton.backgroundColor = colors[indexPath.row % colors.count]

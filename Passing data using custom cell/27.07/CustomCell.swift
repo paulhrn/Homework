@@ -11,6 +11,8 @@ import UIKit
 class CustomCell: UITableViewCell {
     
     // MARK: - Properties
+    static let xib = "CustomCelll"
+    static let reuseIdentifier = String(describing: CustomCell.self)
     //    var callback: ((UIColor) -> ())?
     weak var colorDelegate: ColorDelegate?
     
