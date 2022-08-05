@@ -181,7 +181,7 @@ class PlayRacesVC: UIViewController {
     }
     
     private func forTableView() {
-        PlayRacesVC.dictionary[UserDefaults.standard.value(forKey: "Name") as! String] = UserDefaults.standard.value(forKey: "Score") as! Int - 1
+        PlayRacesVC.dictionary[UserDefaults.standard.value(forKey: "Name") as? String ?? "error"] = UserDefaults.standard.value(forKey: "Score") as! Int - 1
         UserDefaults.standard.set(PlayRacesVC.dictionary, forKey: "Dict")
         if PlayRacesVC.dictionary.count > 5 {
             PlayRacesVC.dictionary.removeAll()
