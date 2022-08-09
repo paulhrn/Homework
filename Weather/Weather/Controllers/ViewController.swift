@@ -11,12 +11,13 @@ import CoreLocation
 class ViewController: UIViewController {
     
     // MARK: - Properties
+    private let locationManager = CLLocationManager()
     private lazy var weekForecasts: [Daily] = []
     private lazy var days: [String] = []
-    lazy var latitude: Double = 52.9
-    lazy var longitude: Double = 27.6
-    lazy var city: String = "Berlin, DE"
-    lazy var timezone: String = "Europe/Moscow"
+    lazy var latitude: CLLocationDegrees = 52.9
+    lazy var longitude: CLLocationDegrees = 27.6
+    lazy var city: String = "\(String(TimeZone.current.identifier))"
+    lazy var timezone: String = "\(String(TimeZone.current.identifier))"
     
     // MARK: - Outlets
     @IBOutlet weak var cityName: UILabel!
@@ -44,6 +45,12 @@ class ViewController: UIViewController {
         DispatchQueue.main.async { [weak self] in
             self?.weekForecast.delegate = self
             self?.weekForecast.dataSource = self
+        }
+        
+        DispatchQueue.global(qos: .default).async { [weak self] in
+            self?.locationManager.delegate = self
+            self?.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            self?.locationManager.requestLocation()
         }
     }
     
@@ -155,7 +162,7 @@ class ViewController: UIViewController {
 }
 
 // MARK: - Extensions
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension ViewController: UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return days.count
     }
@@ -182,4 +189,33 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 75
     }
+    
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        switch manager.authorizationStatus {
+        case .notDetermined:
+            print("notDetermined")
+        case .restricted:
+            print("restricted")
+        case .denied:
+            print("denied")
+        case .authorizedAlways:
+            manager.startUpdatingLocation()
+            print("authorizedAlways")
+        case .authorizedWhenInUse:
+            manager.startUpdatingLocation()
+            print("authorizedWhenInUse")
+        @unknown default:
+            break
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last {
+            self.latitude = location.coordinate.latitude
+            self.longitude = location.coordinate.longitude
+        }
+    }
+        func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+            print(error.localizedDescription)
+        }
 }

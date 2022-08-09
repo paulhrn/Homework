@@ -11,18 +11,13 @@ import UIKit
 struct Weather: Decodable {
     var latitude: Double
     var longitude: Double
-    var generationTimeMs: Double
-    var utcOffsetSeconds: Int
-    var elevation: Int
     var hourlyUnits: HourlyUnits
     var hourly: Hourly
     var dailyUnits: DailyUnits
     var daily: Daily
     
     enum CodingKeys: String, CodingKey {
-        case elevation, latitude, longitude, hourly, daily
-        case generationTimeMs = "generationtime_ms"
-        case utcOffsetSeconds = "utc_offset_seconds"
+        case latitude, longitude, hourly, daily
         case hourlyUnits = "hourly_units"
         case dailyUnits = "daily_units"
     }
