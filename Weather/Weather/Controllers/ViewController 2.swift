@@ -11,13 +11,12 @@ import CoreLocation
 class ViewController: UIViewController {
     
     // MARK: - Properties
-    private let locationManager = CLLocationManager()
     private lazy var weekForecasts: [Daily] = []
     private lazy var days: [String] = []
-    lazy var latitude: CLLocationDegrees = 52.9
-    lazy var longitude: CLLocationDegrees = 27.6
-    lazy var city: String = "\(String(TimeZone.current.identifier).split(separator: "/").last ?? "")"
-    lazy var timezone: String = "\(String(TimeZone.current.identifier))"
+    lazy var latitude: Double = 52.9
+    lazy var longitude: Double = 27.6
+    lazy var city: String = "Berlin, DE"
+    lazy var timezone: String = "Europe/Moscow"
     
     // MARK: - Outlets
     @IBOutlet weak var cityName: UILabel!
@@ -45,12 +44,6 @@ class ViewController: UIViewController {
         DispatchQueue.main.async { [weak self] in
             self?.weekForecast.delegate = self
             self?.weekForecast.dataSource = self
-        }
-        
-        DispatchQueue.global(qos: .default).async { [weak self] in
-            self?.locationManager.delegate = self
-            self?.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            self?.locationManager.requestLocation()
         }
     }
     
@@ -91,8 +84,8 @@ class ViewController: UIViewController {
         let windSpeed = Int(data.hourly.windspeed[hour])
         self.cityName.text = "\(city)"
         self.degrees.text = "\(degrees)\(data.hourlyUnits.temperature)"
-        self.humidity.text = "\(L10n.currentHumidity) \(humidity)\(data.hourlyUnits.humidity)"
-        self.windSpeed.text = "\(L10n.currentWindSpeed) \(windSpeed) \(data.hourlyUnits.windspeed)"
+        self.humidity.text = "Current humidity: \(humidity)\(data.hourlyUnits.humidity)"
+        self.windSpeed.text = "Current wind speed: \(windSpeed) \(data.hourlyUnits.windspeed)"
         sunriseImageView.image = UIImage(systemName: "sunrise.fill")
         sunsetImageView.image = UIImage(systemName: "sunset.fill")
         weekForecast.showsVerticalScrollIndicator = false
@@ -151,18 +144,18 @@ class ViewController: UIViewController {
     
     private func formatDate(dateString: String, label: UILabel, dateFormat1: String, dateFormat2: String) {
         let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: L10n.formatterLocale)
+        formatter.locale = Locale(identifier: "en_us")
         formatter.dateFormat = dateFormat1
         if let date = formatter.date(from: dateString) {
             formatter.dateFormat = dateFormat2
             let weekDay = formatter.string(from: date)
-            label.text = "\(weekDay)".capitalizingFirstLetter()
+            label.text = "\(weekDay)"
         }
     }
 }
 
 // MARK: - Extensions
-extension ViewController: UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return days.count
     }
@@ -174,7 +167,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource, CLLocation
         setImageView(weathercode: day.weathercode[indexPath.row], weatherImage: cell.weatherImage, string: "")
         switch indexPath.row {
         case 0:
-            cell.weekDay.text = L10n.today
+            cell.weekDay.text = "Today"
         default:
             formatDate(dateString: days[indexPath.row], label: cell.weekDay, dateFormat1: "yyyy-MM-dd", dateFormat2: "EEEE")
         }
@@ -189,33 +182,4 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource, CLLocation
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 75
     }
-    
-    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
-        switch manager.authorizationStatus {
-        case .notDetermined:
-            print("notDetermined")
-        case .restricted:
-            print("restricted")
-        case .denied:
-            print("denied")
-        case .authorizedAlways:
-            manager.startUpdatingLocation()
-            print("authorizedAlways")
-        case .authorizedWhenInUse:
-            manager.startUpdatingLocation()
-            print("authorizedWhenInUse")
-        @unknown default:
-            break
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.last {
-            self.latitude = location.coordinate.latitude
-            self.longitude = location.coordinate.longitude
-        }
-    }
-        func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-            print(error.localizedDescription)
-        }
 }

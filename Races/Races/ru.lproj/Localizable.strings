@@ -1,0 +1,46 @@
+/* 
+  Localizable.strings
+  Races
+
+  Created by p h on 10.08.2022.
+  
+*/
+
+"font" = "RaleWay-SemiBold";
+
+//RacesViewController
+"changePlayersNameButton" = "Изменить имя игрока";
+"playButton" = "Играть";
+"scoresButton" = "Рекорды";
+"settingsButton" = "Настройки";
+"racesAlertTitle" = "Введите своё имя ;)";
+"continueAction" = "Продолжить";
+"yourNamePlaceholder" = "Ваше имя";
+
+//ScoresRaces
+"lookAtScoresLabel" = "Здесь хранятся ваши рекорды ;)";
+"userGreetingLabel" = "Привет";
+"currentScoreLabel" = "Текущий рекорд:";
+"previousScoresLabel" = "Предыдущие рекорды:";
+"hi" = "Привет";
+"user" = "игрок";
+"whosScore" = " – рекорд:";
+"dateFormat" = "dd MMM, HH:mm";
+"formatterLocale" = "ru_ru";
+
+//SettingsRaces
+"carColorLabel" = "Цвет машины";
+"obstacleLabel" = "Препятствие";
+"speedLabel" = "Скорость";
+"default" = "По умолчанию";
+"back" = "Назад";
+"chooseColor" = "Выберите цвет:";
+"chooseObstacle" = "Выберите препятствие:";
+"chooseSpeed" = "Выберите скорость:";
+"white" = "Белый";
+"brick" = "Кирпич";
+"faster" = "Быстрее";
+"slower" = "Медленнее";
+"settingsAlertTitle" = "Вы хотите сохранить изменения?";
+"yesAction" = "Да";
+"noAction" = "Нет";

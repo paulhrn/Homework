@@ -12,15 +12,15 @@ import CoreLocation
 class Initial: UIViewController {
     
     // MARK: - Properties
-    private let cities: [[String]:[CLLocationDegrees]] = [["Moscow, RU", "Europe/Moscow"]: [55.751244, 37.618423],
-                                                          ["Minsk, BY", "Europe/Moscow"]: [53.893009, 27.567444],
-                                                          ["Saint Petersburg, RU", "Europe/Minsk"]: [59.937500, 30.308611],
-                                                          ["Wellington, NZ", "Pacific/Auckland"]: [-41.276825, 174.777969],
-                                                          ["London, GB", "Europe/London"]: [51.509865, -0.118092],
-                                                          ["Berlin, DE", "Europe/Berlin"]: [52.520008, 13.404954],
-                                                          ["Paris, FR", "Europe/Berlin"]: [48.864716, 2.349014],
-                                                          ["Istanbul, TR", "Europe/Moscow"]: [41.015137, 28.979530],
-                                                          ["Madrid, ES", "Europe/Berlin"]: [40.416775, -3.703790]]
+    private let cities: [[String]:[CLLocationDegrees]] = [["\(L10n.moscow), RU", "Europe/Moscow"]: [55.751244, 37.618423],
+                                                          ["\(L10n.minsk), BY", "Europe/Moscow"]: [53.893009, 27.567444],
+                                                          ["\(L10n.saintPetersburg), RU", "Europe/Minsk"]: [59.937500, 30.308611],
+                                                          ["\(L10n.wellington), NZ", "Pacific/Auckland"]: [-41.276825, 174.777969],
+                                                          ["\(L10n.london), GB", "Europe/London"]: [51.509865, -0.118092],
+                                                          ["\(L10n.berlin), DE", "Europe/Berlin"]: [52.520008, 13.404954],
+                                                          ["\(L10n.paris), FR", "Europe/Berlin"]: [48.864716, 2.349014],
+                                                          ["\(L10n.istanbul), TR", "Europe/Moscow"]: [41.015137, 28.979530],
+                                                          ["\(L10n.madrid), ES", "Europe/Berlin"]: [40.416775, -3.703790]]
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var blackView: UIView!
@@ -43,8 +43,8 @@ class Initial: UIViewController {
             labelMyLocation.backgroundColor = UIColor(patternImage: image)
         }
         view.backgroundColor = #colorLiteral(red: 0.8237888195, green: 0.9884701204, blue: 1, alpha: 1)
-        label.text = "Choose city to show weather:"
-        labelMyLocation.text = "My location"
+        label.text = L10n.chooseCity
+        labelMyLocation.text = L10n.myLocation
         labelMyLocation.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapMyLocation)))
         label.clipsToBounds = true
         labelMyLocation.clipsToBounds = true

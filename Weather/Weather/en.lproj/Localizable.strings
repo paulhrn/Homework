@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  Weather
+
+  Created by p h on 10.08.2022.
+  
+*/
+
+//InitialViewController
+"Moscow" = "Moscow";
+"Minsk" = "Minsk";
+"SaintPetersburg" = "Saint Petersburg";
+"Wellington" = "Wellington";
+"London" = "London";
+"Berlin" = "Berlin";
+"Paris" = "Paris";
+"Istanbul" = "Istanbul";
+"Madrid" = "Madrid";
+"chooseCity" = "Choose city to show weather:";
+"myLocation" = "My location";
+
+//ViewController
+"formatterLocale" = "en_us";
+"currentHumidity" = "Current humidity:";
+"currentWindSpeed" = "Current wind speed:";
+"today" = "Today";

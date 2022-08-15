@@ -17,6 +17,9 @@
 		EF780D1D289C713300EF4722 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF780D1C289C713300EF4722 /* Assets.xcassets */; };
 		EF780D20289C713300EF4722 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF780D1E289C713300EF4722 /* LaunchScreen.storyboard */; };
 		EF780D28289C715400EF4722 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF780D27289C715400EF4722 /* WeatherModel.swift */; };
+		EF8E93AF28A44C6A000BA642 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF8E93B128A44C6A000BA642 /* Localizable.strings */; };
+		EF8E93B428A44F88000BA642 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E93B328A44F88000BA642 /* Extensions.swift */; };
+		EF8E93B628A44F90000BA642 /* EnumLocalizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E93B528A44F90000BA642 /* EnumLocalizations.swift */; };
 		EF9E4B6E289CB7070024C1F5 /* InitialCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF9E4B6D289CB7070024C1F5 /* InitialCell.xib */; };
 		EF9E4B70289CB7210024C1F5 /* InitialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9E4B6F289CB7210024C1F5 /* InitialCell.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +37,11 @@
 		EF780D1F289C713300EF4722 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF780D21289C713300EF4722 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF780D27289C715400EF4722 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		EF8E93AE28A44C64000BA642 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		EF8E93B028A44C6A000BA642 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EF8E93B228A44C6C000BA642 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EF8E93B328A44F88000BA642 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		EF8E93B528A44F90000BA642 /* EnumLocalizations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumLocalizations.swift; sourceTree = "<group>"; };
 		EF9E4B6D289CB7070024C1F5 /* InitialCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InitialCell.xib; sourceTree = "<group>"; };
 		EF9E4B6F289CB7210024C1F5 /* InitialCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +82,7 @@
 				EF780D2A289C717100EF4722 /* Controllers */,
 				EF9E4B75289CBA9D0024C1F5 /* Xibs */,
 				EF780D19289C712E00EF4722 /* Main.storyboard */,
+				EF8E93B128A44C6A000BA642 /* Localizable.strings */,
 				EF780D1C289C713300EF4722 /* Assets.xcassets */,
 				EF780D1E289C713300EF4722 /* LaunchScreen.storyboard */,
 				EF780D21289C713300EF4722 /* Info.plist */,
@@ -85,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				EF780D27289C715400EF4722 /* WeatherModel.swift */,
+				EF8E93B528A44F90000BA642 /* EnumLocalizations.swift */,
+				EF8E93B328A44F88000BA642 /* Extensions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -151,6 +162,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = EF780D07289C712E00EF4722;
 			productRefGroup = EF780D11289C712E00EF4722 /* Products */;
@@ -168,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF1215F9289CADD30065F4D4 /* CelllWeekForecast.xib in Resources */,
+				EF8E93AF28A44C6A000BA642 /* Localizable.strings in Resources */,
 				EF780D20289C713300EF4722 /* LaunchScreen.storyboard in Resources */,
 				EF780D1D289C713300EF4722 /* Assets.xcassets in Resources */,
 				EF780D1B289C712E00EF4722 /* Main.storyboard in Resources */,
@@ -183,8 +196,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF780D18289C712E00EF4722 /* ViewController.swift in Sources */,
+				EF8E93B628A44F90000BA642 /* EnumLocalizations.swift in Sources */,
 				EF3EE49B289CA67B00B4C408 /* CellWeekForecast.swift in Sources */,
 				EF780D14289C712E00EF4722 /* AppDelegate.swift in Sources */,
+				EF8E93B428A44F88000BA642 /* Extensions.swift in Sources */,
 				EF12B2EA289CB305000A6410 /* InitialViewController.swift in Sources */,
 				EF780D28289C715400EF4722 /* WeatherModel.swift in Sources */,
 				EF780D16289C712E00EF4722 /* SceneDelegate.swift in Sources */,
@@ -207,8 +222,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				EF780D1F289C713300EF4722 /* Base */,
+				EF8E93AE28A44C64000BA642 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EF8E93B128A44C6A000BA642 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF8E93B028A44C6A000BA642 /* en */,
+				EF8E93B228A44C6C000BA642 /* ru */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -218,6 +243,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -278,6 +304,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

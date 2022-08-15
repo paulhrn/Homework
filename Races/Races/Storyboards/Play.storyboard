@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Play RacesVC-->
+        <scene sceneID="xFk-gm-AHd">
+            <objects>
+                <viewController storyboardIdentifier="PlayRacesV" id="wVC-w4-aFB" customClass="PlayRacesVC" customModule="Races" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d5G-hg-xnX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rpP-VF-p5l">
+                                <rect key="frame" x="82" y="0.0" width="250" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="glh-hD-f0R">
+                                        <rect key="frame" x="102.5" y="0.0" width="45" height="896"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car" translatesAutoresizingMaskIntoConstraints="NO" id="5aU-cK-5Du">
+                                        <rect key="frame" x="87.5" y="600" width="75" height="155"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="155" id="BdV-dr-XYP"/>
+                                            <constraint firstAttribute="width" constant="75" id="wHU-19-raI"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="brick" translatesAutoresizingMaskIntoConstraints="NO" id="L45-ae-3uF">
+                                        <rect key="frame" x="-0.5" y="0.0" width="100" height="116"/>
+                                        <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="85" id="KPG-T2-mMh"/>
+                                            <constraint firstAttribute="height" constant="65" id="yMA-xj-tRf"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="glh-hD-f0R" firstAttribute="top" secondItem="rpP-VF-p5l" secondAttribute="top" id="DVt-o1-ONb"/>
+                                    <constraint firstItem="glh-hD-f0R" firstAttribute="width" secondItem="rpP-VF-p5l" secondAttribute="height" multiplier="1: 20" id="Ja8-Hh-2f2"/>
+                                    <constraint firstAttribute="width" constant="250" id="K04-1M-ect"/>
+                                    <constraint firstItem="glh-hD-f0R" firstAttribute="centerX" secondItem="rpP-VF-p5l" secondAttribute="centerX" id="R7G-cI-3w5"/>
+                                    <constraint firstItem="5aU-cK-5Du" firstAttribute="centerX" secondItem="rpP-VF-p5l" secondAttribute="centerX" id="Uop-OS-AE8"/>
+                                    <constraint firstItem="5aU-cK-5Du" firstAttribute="top" secondItem="rpP-VF-p5l" secondAttribute="top" constant="600" id="W6E-DL-MEV"/>
+                                    <constraint firstAttribute="bottom" secondItem="glh-hD-f0R" secondAttribute="bottom" id="y5g-xe-5an"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="G3h-y2-bxq"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="rpP-VF-p5l" firstAttribute="centerX" secondItem="G3h-y2-bxq" secondAttribute="centerX" id="Bvd-Ed-P0Q"/>
+                            <constraint firstItem="rpP-VF-p5l" firstAttribute="top" secondItem="d5G-hg-xnX" secondAttribute="top" id="X9A-mL-s7v"/>
+                            <constraint firstAttribute="bottom" secondItem="rpP-VF-p5l" secondAttribute="bottom" id="wdi-Fk-72v"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="brick" destination="L45-ae-3uF" id="AS8-cE-LF5"/>
+                        <outlet property="car" destination="5aU-cK-5Du" id="6Tv-Rn-n6E"/>
+                        <outlet property="carCenterX" destination="Uop-OS-AE8" id="Qby-gu-Rsy"/>
+                        <outlet property="road" destination="rpP-VF-p5l" id="zqL-JJ-c9R"/>
+                        <outlet property="roadWidth" destination="K04-1M-ect" id="sKr-a7-Pvv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="18g-51-wNk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44.927536231884062" y="796.875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="brick" width="800" height="600"/>
+        <image name="car" width="1656" height="3265"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

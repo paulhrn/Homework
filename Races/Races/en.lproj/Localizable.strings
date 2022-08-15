@@ -1,0 +1,46 @@
+/* 
+  Localizable.strings
+  Races
+
+  Created by p h on 10.08.2022.
+  
+*/
+
+"font" = "Pacifico";
+
+//RacesViewController
+"changePlayersNameButton" = "Change player's name";
+"playButton" = "Play";
+"scoresButton" = "Scores";
+"settingsButton" = "Settings";
+"racesAlertTitle" = "Enter your name ;)";
+"continueAction" = "Continue";
+"yourNamePlaceholder" = "Your name";
+
+//ScoresRaces
+"lookAtScoresLabel" = "You can look at your score here ;)";
+"userGreetingLabel" = "Hi";
+"currentScoreLabel" = "Current score:";
+"previousScoresLabel" = "Some previous scores:";
+"hi" = "Hi";
+"user" = "user";
+"whosScore" = "'s score:";
+"dateFormat" = "MMM dd, h:mm a";
+"formatterLocale" = "en_us";
+
+//SettingsRaces
+"carColorLabel" = "Car color";
+"obstacleLabel" = "Obstacle";
+"speedLabel" = "Speed";
+"default" = "Default";
+"back" = "Back";
+"chooseColor" = "Choose color:";
+"chooseObstacle" = "Choose obstacle:";
+"chooseSpeed" = "Choose speed:";
+"white" = "White";
+"brick" = "Brick";
+"faster" = "Faster";
+"slower" = "Slower";
+"settingsAlertTitle" = "Do you want to save changes?";
+"yesAction" = "Yes";
+"noAction" = "No";
