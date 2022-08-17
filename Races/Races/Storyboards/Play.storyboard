@@ -63,6 +63,8 @@
                         <outlet property="brick" destination="L45-ae-3uF" id="AS8-cE-LF5"/>
                         <outlet property="car" destination="5aU-cK-5Du" id="6Tv-Rn-n6E"/>
                         <outlet property="carCenterX" destination="Uop-OS-AE8" id="Qby-gu-Rsy"/>
+                        <outlet property="carHeight" destination="BdV-dr-XYP" id="tQb-w9-8t2"/>
+                        <outlet property="carWidth" destination="wHU-19-raI" id="vyw-4J-vNG"/>
                         <outlet property="road" destination="rpP-VF-p5l" id="zqL-JJ-c9R"/>
                         <outlet property="roadWidth" destination="K04-1M-ect" id="sKr-a7-Pvv"/>
                     </connections>

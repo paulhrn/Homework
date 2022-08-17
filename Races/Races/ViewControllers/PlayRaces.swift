@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import CoreMotion
 
 class PlayRacesVC: UIViewController {
     
@@ -23,6 +24,8 @@ class PlayRacesVC: UIViewController {
     private var swipeTwo = UISwipeGestureRecognizer()
     var selectedSetting: enumSettings?
     
+    private let motionManager = CMMotionManager()
+    
     // MARK: - Outlets
     @IBOutlet weak var road: UIView!
     @IBOutlet weak var roadWidth: NSLayoutConstraint!
@@ -31,11 +34,12 @@ class PlayRacesVC: UIViewController {
     }
     @IBOutlet weak var car: UIImageView!
     @IBOutlet weak var carCenterX: NSLayoutConstraint!
+    @IBOutlet weak var carHeight: NSLayoutConstraint!
+    @IBOutlet weak var carWidth: NSLayoutConstraint!
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setBrick()
         swipeOne.addTarget(self, action: #selector (swipeLeft))
         swipeOne.direction = .left
@@ -46,6 +50,7 @@ class PlayRacesVC: UIViewController {
         
         forCar()
         forObstacle()
+        forMotionManager()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -53,6 +58,20 @@ class PlayRacesVC: UIViewController {
         guard let mainTimer = mainTimer else { return }
         mainTimer.invalidate()
         forTableView()
+    }
+    
+    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            carWidth.constant = 100
+            carHeight.constant = 200
+        }
+    }
+    
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            carWidth.constant = 75 //initial
+            carHeight.constant = 155 //initial
+        }
     }
     
     //MARK: - Actions
@@ -185,6 +204,22 @@ class PlayRacesVC: UIViewController {
         UserDefaults.standard.set(PlayRacesVC.dictionary, forKey: "Dict")
         if PlayRacesVC.dictionary.count > 5 {
             PlayRacesVC.dictionary.removeAll()
+        }
+    }
+    
+    private func forMotionManager() {
+        motionManager.accelerometerUpdateInterval = 0.01
+        motionManager.startAccelerometerUpdates(to: .main) { [weak self] (data, error) in
+            guard let self = self else { return }
+            if let error = error {
+                print(error.localizedDescription)
+            }
+            if let data = data {
+                self.carCenterX.constant = CGFloat(data.acceleration.x) * (self.roadWidth.constant * 0.5)
+                if self.carCenterX.constant <= -self.roadWidth.constant / 3 || self.carCenterX.constant >= self.roadWidth.constant / 3 {
+                    self.navigationController?.popToRootViewController(animated: true)
+                }
+            }
         }
     }
 }

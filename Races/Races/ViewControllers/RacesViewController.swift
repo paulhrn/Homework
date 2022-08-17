@@ -37,6 +37,8 @@ class RacesVC: UIViewController {
         }
         buttonsOutlets.forEach{ $0.titleLabel?.addShadow(shadowColor: .darkGray, offset: .init(width: 10, height: 8), radius: 7, opacity: 1) }
         buttonsOutlets.forEach{ $0.attrStringUnderline() }
+        
+        addParallax(buttons: [Play, Scores, Settings])
     }
     
     // MARK: - Actions
@@ -84,5 +86,21 @@ class RacesVC: UIViewController {
         let storyboard = UIStoryboard(name: "Settings", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "SettingsRacesV")
         navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    private func addParallax(buttons: [UIButton]) {
+        let amount = 25
+
+        let horizontal = UIInterpolatingMotionEffect(keyPath: "center.x", type: .tiltAlongHorizontalAxis)
+        horizontal.minimumRelativeValue = -amount
+        horizontal.maximumRelativeValue = amount
+
+        let vertical = UIInterpolatingMotionEffect(keyPath: "center.y", type: .tiltAlongVerticalAxis)
+        vertical.minimumRelativeValue = -amount
+        vertical.maximumRelativeValue = amount
+
+        let group = UIMotionEffectGroup()
+        group.motionEffects = [horizontal, vertical]
+        buttons.forEach{ $0.addMotionEffect(group) }
     }
 }
