@@ -215,7 +215,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource, CLLocation
             self.longitude = location.coordinate.longitude
         }
     }
-        func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-            print(error.localizedDescription)
-        }
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error.localizedDescription)
+    }
 }

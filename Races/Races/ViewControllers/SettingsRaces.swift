@@ -8,6 +8,16 @@
 import Foundation
 import UIKit
 
+enum enumSettings: String {
+    case yellow = "Yellow"
+    case white = "White"
+    case brick = "Brick"
+    case stone = "Stone"
+    case three = "3.0"
+    case twoFive = "2.5"
+    case two = "2.0"
+}
+
 // MARK: - Singleton
 class Settings {
     static let set = Settings(carColor: UIImage(named: "car")!, obstacle: UIImage(named: "stone")!, speed: 2.5)

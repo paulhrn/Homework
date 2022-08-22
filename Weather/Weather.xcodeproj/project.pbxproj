@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8C8AC55D8B8D839EECF162B /* Pods_Simple_Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7230C592D78DD2242671C84 /* Pods_Simple_Weather.framework */; };
 		EF1215F9289CADD30065F4D4 /* CelllWeekForecast.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF1215F8289CADD30065F4D4 /* CelllWeekForecast.xib */; };
 		EF12B2EA289CB305000A6410 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF12B2E9289CB305000A6410 /* InitialViewController.swift */; };
+		EF27677528B433E3007F8A86 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF27677428B433E3007F8A86 /* GoogleService-Info.plist */; };
 		EF3EE49B289CA67B00B4C408 /* CellWeekForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3EE49A289CA67B00B4C408 /* CellWeekForecast.swift */; };
 		EF780D14289C712E00EF4722 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF780D13289C712E00EF4722 /* AppDelegate.swift */; };
 		EF780D16289C712E00EF4722 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF780D15289C712E00EF4722 /* SceneDelegate.swift */; };
@@ -25,8 +27,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C413A54C0B18F6C3F5881F7 /* Pods-Simple Weather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simple Weather.release.xcconfig"; path = "Target Support Files/Pods-Simple Weather/Pods-Simple Weather.release.xcconfig"; sourceTree = "<group>"; };
+		7E225695DD72DF27816588E6 /* Pods-Simple Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simple Weather.debug.xcconfig"; path = "Target Support Files/Pods-Simple Weather/Pods-Simple Weather.debug.xcconfig"; sourceTree = "<group>"; };
+		B7230C592D78DD2242671C84 /* Pods_Simple_Weather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simple_Weather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1215F8289CADD30065F4D4 /* CelllWeekForecast.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CelllWeekForecast.xib; sourceTree = "<group>"; };
 		EF12B2E9289CB305000A6410 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		EF27677428B433E3007F8A86 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EF3EE49A289CA67B00B4C408 /* CellWeekForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellWeekForecast.swift; sourceTree = "<group>"; };
 		EF780D10289C712E00EF4722 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF780D13289C712E00EF4722 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,17 +57,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8C8AC55D8B8D839EECF162B /* Pods_Simple_Weather.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35702355A52CF66D182D4127 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7E225695DD72DF27816588E6 /* Pods-Simple Weather.debug.xcconfig */,
+				1C413A54C0B18F6C3F5881F7 /* Pods-Simple Weather.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7A84DFA24F5E45D59FB271BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7230C592D78DD2242671C84 /* Pods_Simple_Weather.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EF780D07289C712E00EF4722 = {
 			isa = PBXGroup;
 			children = (
 				EF780D12289C712E00EF4722 /* Weather */,
 				EF780D11289C712E00EF4722 /* Products */,
+				35702355A52CF66D182D4127 /* Pods */,
+				7A84DFA24F5E45D59FB271BC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +112,7 @@
 				EF780D1C289C713300EF4722 /* Assets.xcassets */,
 				EF780D1E289C713300EF4722 /* LaunchScreen.storyboard */,
 				EF780D21289C713300EF4722 /* Info.plist */,
+				EF27677428B433E3007F8A86 /* GoogleService-Info.plist */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -127,9 +154,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF780D24289C713300EF4722 /* Build configuration list for PBXNativeTarget "Simple Weather" */;
 			buildPhases = (
+				572EE7A2EC35241DAB6EE1A8 /* [CP] Check Pods Manifest.lock */,
 				EF780D0C289C712E00EF4722 /* Sources */,
 				EF780D0D289C712E00EF4722 /* Frameworks */,
 				EF780D0E289C712E00EF4722 /* Resources */,
+				851B1B5C5EF5A377724395DA /* [CP] Embed Pods Frameworks */,
+				EF27677328B42F35007F8A86 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -185,10 +215,72 @@
 				EF780D1D289C713300EF4722 /* Assets.xcassets in Resources */,
 				EF780D1B289C712E00EF4722 /* Main.storyboard in Resources */,
 				EF9E4B6E289CB7070024C1F5 /* InitialCell.xib in Resources */,
+				EF27677528B433E3007F8A86 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		572EE7A2EC35241DAB6EE1A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Simple Weather-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		851B1B5C5EF5A377724395DA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Simple Weather/Pods-Simple Weather-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Simple Weather/Pods-Simple Weather-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Simple Weather/Pods-Simple Weather-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF27677328B42F35007F8A86 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EF780D0C289C712E00EF4722 /* Sources */ = {
@@ -273,7 +365,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -357,6 +449,7 @@
 		};
 		EF780D25289C713300EF4722 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E225695DD72DF27816588E6 /* Pods-Simple Weather.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -385,6 +478,7 @@
 		};
 		EF780D26289C713300EF4722 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C413A54C0B18F6C3F5881F7 /* Pods-Simple Weather.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

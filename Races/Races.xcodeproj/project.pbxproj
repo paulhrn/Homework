@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99296F0E3C7AC8309BE2A404 /* Pods_Races.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E58D05DB7F0EE53ECA5DE58 /* Pods_Races.framework */; };
 		EF8E93A028A43C26000BA642 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF8E93A228A43C26000BA642 /* Localizable.strings */; };
 		EF8E93A628A443B9000BA642 /* EnumLocalizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E93A528A443B9000BA642 /* EnumLocalizations.swift */; };
+		EF9619E328B41EA800711F4B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF9619E228B41EA800711F4B /* GoogleService-Info.plist */; };
 		FA406B8E2863AF1800AB6D24 /* Pacifico.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA406B8A2863AE6500AB6D24 /* Pacifico.ttf */; };
 		FA406B902863AF1C00AB6D24 /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA406B8D2863AF1700AB6D24 /* Raleway-SemiBold.ttf */; };
 		FA406B932863B23E00AB6D24 /* JosefinSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA406B922863B23C00AB6D24 /* JosefinSans-SemiBold.ttf */; };
@@ -28,10 +30,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1465137CAA0FA8F93242D8EF /* Pods-Races.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Races.debug.xcconfig"; path = "Target Support Files/Pods-Races/Pods-Races.debug.xcconfig"; sourceTree = "<group>"; };
+		5E58D05DB7F0EE53ECA5DE58 /* Pods_Races.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Races.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2848DFBD75E1ABE8369ECE7 /* Pods-Races.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Races.release.xcconfig"; path = "Target Support Files/Pods-Races/Pods-Races.release.xcconfig"; sourceTree = "<group>"; };
 		EF8E939D28A43C06000BA642 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		EF8E93A328A43C28000BA642 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EF8E93A428A43FB7000BA642 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EF8E93A528A443B9000BA642 /* EnumLocalizations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumLocalizations.swift; sourceTree = "<group>"; };
+		EF9619E228B41EA800711F4B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FA406B8A2863AE6500AB6D24 /* Pacifico.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pacifico.ttf; sourceTree = "<group>"; };
 		FA406B8D2863AF1700AB6D24 /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
 		FA406B922863B23C00AB6D24 /* JosefinSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -57,12 +63,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99296F0E3C7AC8309BE2A404 /* Pods_Races.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B544CEA39A2BAA9B872DCE7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E58D05DB7F0EE53ECA5DE58 /* Pods_Races.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9AF90BA19269E7B147FEB02C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1465137CAA0FA8F93242D8EF /* Pods-Races.debug.xcconfig */,
+				E2848DFBD75E1ABE8369ECE7 /* Pods-Races.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FA406B852863AA8600AB6D24 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +124,8 @@
 			children = (
 				FAC34C2328249F670061F3D8 /* Races */,
 				FAC34C2228249F670061F3D8 /* Products */,
+				9AF90BA19269E7B147FEB02C /* Pods */,
+				4B544CEA39A2BAA9B872DCE7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +150,7 @@
 				EF8E93A228A43C26000BA642 /* Localizable.strings */,
 				FAC34C2D28249F690061F3D8 /* Assets.xcassets */,
 				FAC34C3228249F690061F3D8 /* Info.plist */,
+				EF9619E228B41EA800711F4B /* GoogleService-Info.plist */,
 				FAC34C2F28249F690061F3D8 /* LaunchScreen.storyboard */,
 			);
 			path = Races;
@@ -136,9 +163,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAC34C3528249F690061F3D8 /* Build configuration list for PBXNativeTarget "Races" */;
 			buildPhases = (
+				817FC47B59C54348947F5FEF /* [CP] Check Pods Manifest.lock */,
 				FAC34C1D28249F670061F3D8 /* Sources */,
 				FAC34C1E28249F670061F3D8 /* Frameworks */,
 				FAC34C1F28249F670061F3D8 /* Resources */,
+				FED54D423CDFA9BA972D2033 /* [CP] Embed Pods Frameworks */,
+				EF27677228B428EC007F8A86 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -196,12 +226,74 @@
 				EF8E93A028A43C26000BA642 /* Localizable.strings in Resources */,
 				FA406B8E2863AF1800AB6D24 /* Pacifico.ttf in Resources */,
 				FAED2F6B285CA559008568E2 /* Play.storyboard in Resources */,
+				EF9619E328B41EA800711F4B /* GoogleService-Info.plist in Resources */,
 				FA406B932863B23E00AB6D24 /* JosefinSans-SemiBold.ttf in Resources */,
 				FAED2F6F285CA56B008568E2 /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		817FC47B59C54348947F5FEF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Races-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF27677228B428EC007F8A86 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
+		FED54D423CDFA9BA972D2033 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Races/Pods-Races-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Races/Pods-Races-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Races/Pods-Races-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FAC34C1D28249F670061F3D8 /* Sources */ = {
@@ -277,7 +369,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -361,9 +453,11 @@
 		};
 		FAC34C3628249F690061F3D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1465137CAA0FA8F93242D8EF /* Pods-Races.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = A4KG5S93S9;
@@ -379,8 +473,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = tms.Races;
+				PRODUCT_BUNDLE_IDENTIFIER = tms.homework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -389,9 +484,11 @@
 		};
 		FAC34C3728249F690061F3D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2848DFBD75E1ABE8369ECE7 /* Pods-Races.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = A4KG5S93S9;
@@ -407,8 +504,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = tms.Races;
+				PRODUCT_BUNDLE_IDENTIFIER = tms.homework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

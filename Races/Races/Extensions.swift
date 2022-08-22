@@ -8,16 +8,6 @@
 import Foundation
 import UIKit
 
-enum enumSettings: String {
-    case yellow = "Yellow"
-    case white = "White"
-    case brick = "Brick"
-    case stone = "Stone"
-    case three = "3.0"
-    case twoFive = "2.5"
-    case two = "2.0"
-}
-
 extension UIView {
     func addShadow(shadowColor: UIColor = .red, offset: CGSize = .init(width: 5, height: 5), radius: CGFloat = 10, opacity: Float = 1) {
         layer.shadowColor = shadowColor.cgColor
