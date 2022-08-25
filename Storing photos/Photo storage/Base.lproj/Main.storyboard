@@ -47,7 +47,19 @@
                             <constraint firstAttribute="bottom" secondItem="Mwt-Md-hp9" secondAttribute="bottom" id="iUK-1Q-cfr"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="0io-tz-2Gk"/>
+                    <navigationItem key="navigationItem" id="0io-tz-2Gk">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="QEb-Rf-dJ5">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="iD6-ae-5j3">
+                                <rect key="frame" x="233" y="5" width="161" height="34.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Change password"/>
+                                <connections>
+                                    <action selector="changePasswordButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZbX-Xr-eQV"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="viewForXib" destination="Mwt-Md-hp9" id="k4T-HL-iOc"/>
                         <segue destination="Mok-YA-gFj" kind="show" identifier="First" id="cb6-Nu-IFM"/>
